@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css?v=1.3">
+    
+    <style>
+        /* RESET - Áp dụng riêng cho Landing Page */
+        .lp-tiktok-container * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            color: inherit; 
+            font-size: inherit; 
+            line-height: inherit;
+        }
+
+        /* Thiết lập nền và màu chữ chính cho Landing Page */
+        .lp-tiktok-container {
+            background: #0d0d0d;
+            color: #eee;
+            line-height: 1.6;
+            margin: 0 auto;
+        }
+
+        /* TikTok Colors */
+        :root {
+            --tiktok-pink: #FE2C55;
+            --tiktok-blue: #24F6F0;
+            --tiktok-dark: #0d0d0d;
+        }
+
+        /* ==================== BANNER ==================== */
+
+        .lp-tiktok-container .lp-banner-section { 
+            width: 100%;
+            padding: 100px 5%;
+            background: linear-gradient(135deg, #000 0%, #111 50%, #000 100%);
+            border-bottom: 3px solid var(--tiktok-pink);
+            margin-bottom: 50px;
+        }
+
+        .lp-tiktok-container .lp-banner-inner { 
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .lp-tiktok-container .lp-banner-heading-h1 {
+            font-size: 46px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .lp-tiktok-container .lp-tiktok-highlight { 
+            color: var(--tiktok-pink);
+            text-shadow: 0 0 12px var(--tiktok-pink);
+        }
+
+        .lp-tiktok-container .lp-banner-p {
+            max-width: 850px;
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .lp-tiktok-container .lp-tiktok-btn { 
+            padding: 14px 32px;
+            background: var(--tiktok-pink);
+            color: #fff;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: .3s;
+            display: inline-block; 
+        }
+
+        .lp-tiktok-container .lp-tiktok-btn:hover {
+            background: var(--tiktok-blue);
+            color: #000;
+        }
+
+        /* ==================== TITLE ==================== */
+
+        .lp-tiktok-container .lp-section-title { 
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .lp-tiktok-container .lp-section-title::after {
+            content: "";
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(to right, var(--tiktok-pink), var(--tiktok-blue));
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            border-radius: 10px;
+        }
+
+        /* ==================== PROCESS ==================== */
+
+        .lp-tiktok-container .lp-process-section { 
+            padding: 60px 5%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .lp-tiktok-container .lp-process-grid { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .lp-tiktok-container .lp-process-item { 
+            background: #111;
+            border-left: 5px solid var(--tiktok-pink);
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .lp-tiktok-container .lp-process-item-h3 { 
+            color: var(--tiktok-blue);
+            margin-bottom: 10px;
+            font-size: 18px; 
+        }
+
+        .lp-tiktok-container .lp-process-item-p {
+            font-size: 15px; 
+        }
+
+
+        /* ==================== TYPES ==================== */
+
+        .lp-tiktok-container .lp-types-section { 
+            padding: 60px 5%;
+            background: #141414;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .lp-tiktok-container .lp-types-grid { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .lp-tiktok-container .lp-type-box { 
+            background: #111;
+            padding: 30px;
+            border-radius: 14px;
+            /* Đã bỏ border: 1px solid #222; nếu bạn muốn loại bỏ viền của Type Box */
+            border: 1px solid #222; /* Giữ lại viền mỏng màu tối để tách biệt Type Box */
+            position: relative;
+        }
+
+        .lp-tiktok-container .lp-type-box-h3 { 
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .lp-tiktok-container .lp-type-box-p {
+            font-size: 15px;
+        }
+
+        /* Sticker */
+        .lp-tiktok-container .lp-sticker { 
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .lp-tiktok-container .neon-blue {
+            background: var(--tiktok-blue);
+            color: #000;
+        }
+
+        .lp-tiktok-container .neon-pink {
+            background: var(--tiktok-pink);
+            color: #fff;
+        }
+
+        .lp-tiktok-container .neon-mix {
+            background: linear-gradient(90deg, var(--tiktok-pink), var(--tiktok-blue));
+            color: #000;
+        }
+
+        /* ==================== COMMIT ==================== */
+
+        .lp-tiktok-container .lp-commit-section { 
+            padding: 60px 5%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .lp-tiktok-container .lp-commit-grid { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .lp-tiktok-container .lp-commit-card { 
+            background: #111;
+            padding: 30px;
+            border-radius: 14px;
+            position: relative;
+            border-top: 4px solid var(--tiktok-blue);
+        }
+
+        .lp-tiktok-container .lp-commit-card-h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .lp-tiktok-container .lp-commit-card-p {
+            font-size: 15px;
+        }
+
+
+        .lp-tiktok-container .lp-strike { 
+            width: 80px;
+            height: 12px;
+            position: absolute;
+            top: -8px;
+            left: 20px;
+            opacity: .3;
+            border-radius: 20px;
+        }
+
+        .lp-tiktok-container .strike-blue {
+            background: var(--tiktok-blue);
+        }
+
+        .lp-tiktok-container .strike-pink {
+            background: var(--tiktok-pink);
+        }
+
+        .lp-tiktok-container .strike-mix {
+            background: linear-gradient(90deg, var(--tiktok-pink), var(--tiktok-blue));
+        }
+
+        /* ==================== PRICING ==================== */
+
+        .lp-tiktok-container .lp-pricing-section { 
+            padding: 60px 5%;
+            background: #141414;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .lp-tiktok-container .lp-pricing-layout { 
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .lp-tiktok-container .lp-pricing-content { 
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .lp-tiktok-container .lp-pricing-content-h3 { 
+            color: var(--tiktok-blue);
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .lp-tiktok-container .lp-pricing-content-p {
+            margin-bottom: 22px;
+            opacity: 0.9;
+        }
+
+        /* Form */
+        .lp-tiktok-container .lp-contact-form { 
+            flex: 1;
+            background: #111;
+            padding: 30px;
+            border-radius: 14px;
+            border: 1px solid #222;
+            min-width: 360px;
+        }
+        
+        .lp-tiktok-container .lp-contact-form-h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .lp-tiktok-container .lp-contact-form input,
+        .lp-tiktok-container .lp-contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 14px;
+            background: #181818;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 6px;
+        }
+
+        .lp-tiktok-container .lp-contact-form button {
+            width: 100%;
+            background: var(--tiktok-pink);
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .lp-tiktok-container .lp-contact-form button:hover {
+            background: var(--tiktok-blue);
+            color: #000;
+        }
+
+        /* ====== WHY TIKTOK SECTION ====== */
+        .lp-tiktok-container .lp-why-section { 
+            padding: 60px 5%;
+            background: linear-gradient(180deg, #0f0f0f 0%, #0b0b0b 100%);
+            color: #eee;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .lp-tiktok-container .lp-why-inner { 
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .lp-tiktok-container .lp-why-intro-p { 
+            max-width: 900px;
+            margin: 10px auto 30px;
+            color: #dcdcdc;
+            font-size: 16.5px;
+            line-height: 1.65;
+            opacity: 0.95;
+        }
+
+        /* grid */
+        .lp-tiktok-container .lp-why-grid { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 22px;
+            margin-top: 18px;
+        }
+
+        /* each item */
+        .lp-tiktok-container .lp-why-item { 
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            /* ĐÃ BỎ VIỀN TRẮNG TẠI ĐÂY: border: 1px solid rgba(255, 255, 255, 0.03); */
+            border: none;
+            padding: 22px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            transition: transform .28s ease, box-shadow .28s ease;
+            min-height: 150px;
+        }
+
+        .lp-tiktok-container .lp-why-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        /* decorative neon stripe behind title - H3 */
+        .lp-tiktok-container .lp-why-item-h3 { 
+            font-size: 18.5px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 3;
+            color: #fff;
+        }
+
+        .lp-tiktok-container .lp-why-item-h3::after {
+            content: "";
+            position: absolute;
+            left: -6px;
+            bottom: -6px;
+            width: 60%;
+            height: 12px;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #FE2C55, #24F6F0);
+            opacity: 0.18;
+            z-index: 1;
+            transform: skew(-6deg);
+        }
+
+        /* description - P */
+        .lp-tiktok-container .lp-why-desc-p { 
+            color: #d1d1d1;
+            line-height: 1.7;
+            font-size: 15.5px;
+        }
+
+        /* CTA line */
+        .lp-tiktok-container .lp-why-cta-p { 
+            margin-top: 24px;
+            font-weight: 600;
+            color: #e6e6e6;
+            font-size: 15.5px;
+        }
+
+        .lp-tiktok-container .lp-link-cta { 
+            color: #FE2C55;
+            text-decoration: underline;
+            font-weight: 800;
+            margin-left: 8px;
+        }
+
+        /* responsive tweaks */
+        @media (max-width: 900px) {
+            .lp-tiktok-container .lp-why-intro-p {
+                font-size: 15.5px;
+            }
+
+            .lp-tiktok-container .lp-why-item-h3 {
+                font-size: 17px;
+            }
+
+            .lp-tiktok-container .lp-why-desc-p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+      <!-- NAVBAR -->
+    <div id="navbar"></div>
+    <script>
+        fetch("navbar.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("navbar").innerHTML = html);
+    </script>
+    <div class="lp-tiktok-container">
+        <section class="lp-banner-section">
+            <div class="lp-banner-inner">
+                <h1 class="lp-banner-heading-h1">
+                    <span class="lp-tiktok-highlight">TikTok Ads</span> – Bứt tốc doanh thu với nền tảng video ngắn phổ biến
+                    nhất hiện nay
+                </h1>
+                <p class="lp-banner-p">
+                    TikTok đang dẫn đầu xu hướng tiêu thụ nội dung và hành vi mua sắm theo cảm xúc.
+                    Sota giúp doanh nghiệp khai thác tối đa sức mạnh của TikTok Ads với chiến lược sáng tạo nội dung, tối ưu
+                    chuyển đổi,
+                    và kỹ thuật phân phối theo thuật toán "Interest Graph".
+                </p>
+                <a href="#contact" class="lp-tiktok-btn">Nhận tư vấn miễn phí</a>
+            </div>
+        </section>
+        
+        <section class="lp-why-section">
+            <div class="lp-why-inner">
+                <h2 class="lp-section-title">Tại sao doanh nghiệp nên dùng TikTok Ads?</h2>
+
+                <p class="lp-why-intro-p">
+                    TikTok không chỉ là nền tảng giải trí — nó là một kênh mua sắm cảm xúc, nơi nội dung ngắn có sức lan
+                    truyền mạnh và tạo quyết định mua hàng trong vài giây. Dưới đây là lý do cụ thể vì sao TikTok Ads nên
+                    nằm trong chiến lược tiếp thị của bạn.
+                </p>
+
+                <div class="lp-why-grid">
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3">1. Tiếp cận lượng lớn & trẻ trung</h3>
+                        <p class="lp-why-desc-p">
+                            Hàng triệu người dùng cuộn video mỗi ngày — đặc biệt là nhóm 18–34 tuổi. Nếu sản phẩm của bạn
+                            hướng đến thị trường tiêu dùng nhanh, thời trang, làm đẹp, F&B hay dịch vụ trẻ trung — TikTok là
+                            nơi khách hàng đang ở.
+                        </p>
+                    </article>
+
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3">2. Thuật toán đẩy nội dung mạnh — viral nhanh</h3>
+                        <p class="lp-why-desc-p">
+                            Thuật toán TikTok ưu tiên nội dung thu hút tương tác trong những giây đầu. Một video chất lượng
+                            có thể bùng nổ lượt xem, kéo theo lượt tương tác và đơn hàng mà không cần ngân sách quá lớn.
+                        </p>
+                    </article>
+
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3">3. Chi phí tiếp cận ban đầu thấp — hiệu quả nhanh</h3>
+                        <p class="lp-why-desc-p">
+                            So với một số nền tảng truyền thống, chi phí để đạt reach & engagement ban đầu trên TikTok
+                            thường thấp hơn nếu creative đúng trend — giúp test sản phẩm nhanh, tối ưu kịp thời.
+                        </p>
+                    </article>
+
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3">4. Đa dạng định dạng & mục tiêu chuyển đổi</h3>
+                        <p class="lp-why-desc-p">
+                            Từ In-Feed, Spark Ads đến Lead Ads hay TikTok Shop — bạn có thể vừa làm branding vừa đẩy trực
+                            tiếp đơn hàng, thu lead, hoặc tăng traffic về landing page một cách linh hoạt.
+                        </p>
+                    </article>
+
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3">5. Dữ liệu & tối ưu theo hành vi xem</h3>
+                        <p class="lp-why-desc-p">
+                            TikTok cung cấp dữ liệu về thời gian xem, tỷ lệ hoàn thành video, hành vi tương tác — giúp bạn
+                            tối ưu creative và target cho chiến dịch lần sau hiệu quả hơn.
+                        </p>
+                    </article>
+
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3">6. Tăng nhận diện + tạo nhu cầu mua</h3>
+                        <p class="lp-why-desc-p">
+                            Những video ngắn, câu chuyện cảm xúc, demo sản phẩm thực tế thường kích thích nhu cầu mua tự
+                            phát. TikTok là nền tảng thúc đẩy “impulse buy” hiệu quả.
+                        </p>
+                    </article>
+                </div>
+
+                <p class="lp-why-cta-p">
+                    Bạn muốn Sota phân tích xem TikTok phù hợp với ngành bạn hay không? <a href="#contact"
+                        class="lp-link-cta">Đăng ký tư vấn miễn phí</a> — chúng tôi trả lời trong 1 giờ làm việc.
+                </p>
+            </div>
+        </section>
+
+        <section class="lp-process-section">
+            <h2 class="lp-section-title">Quy trình triển khai TikTok Ads tại Sota</h2>
+
+            <div class="lp-process-grid">
+                <div class="lp-process-item">
+                    <h3 class="lp-process-item-h3">01. Tiếp nhận thông tin & mục tiêu</h3>
+                    <p class="lp-process-item-p">
+                        Chúng tôi lắng nghe ngành của bạn, sản phẩm, khách hàng mục tiêu và mục đích chạy quảng cáo:
+                        tăng đơn, tăng follow, viral thương hiệu hay scale doanh số.
+                    </p>
+                </div>
+
+                <div class="lp-process-item">
+                    <h3 class="lp-process-item-h3">02. Phân tích thị trường & hành vi người xem</h3>
+                    <p class="lp-process-item-p">
+                        TikTok vận hành theo thuật toán phân phối hành vi xem video.
+                        Sota phân tích sở thích, nội dung đang thịnh hành, đặc điểm khách hàng và đối thủ để tối ưu chiến
+                        lược ngay từ đầu.
+                    </p>
+                </div>
+
+                <div class="lp-process-item">
+                    <h3 class="lp-process-item-h3">03. Lên chiến lược sáng tạo – ngân sách – nội dung</h3>
+                    <p class="lp-process-item-p">
+                        Xây dựng concept video, script nội dung, CTA mạnh mẽ, kịch bản hiệu ứng, nhạc – đồng thời phân nhóm
+                        chiến dịch
+                        theo mục tiêu cụ thể: chuyển đổi, lưu lượng truy cập, Lead, hoặc Ghim hồ sơ.
+                    </p>
+                </div>
+
+                <div class="lp-process-item">
+                    <h3 class="lp-process-item-h3">04. Sản xuất video / xử lý nội dung</h3>
+                    <p class="lp-process-item-p">
+                        Đội ngũ sáng tạo của Sota hỗ trợ chỉnh sửa video, thêm sub, caption, hiệu ứng TikTok, định dạng
+                        chuẩn 9:16
+                        giúp video thu hút ngay 3s đầu tiên.
+                    </p>
+                </div>
+
+                <div class="lp-process-item">
+                    <h3 class="lp-process-item-h3">05. Thiết lập quảng cáo & tối ưu 48h đầu</h3>
+                    <p class="lp-process-item-p">
+                        Trong 48h đầu, thuật toán cần dữ liệu chuẩn.
+                        Sota điều chỉnh liên tục: ratio video, chuyển nhóm khách hàng, tối ưu giá thầu, khoanh vùng độ tuổi
+                        phù hợp.
+                    </p>
+                </div>
+
+                <div class="lp-process-item">
+                    <h3 class="lp-process-item-h3">06. Duy trì – Scale – Mở rộng thị trường</h3>
+                    <p class="lp-process-item-p">
+                        Sau giai đoạn ổn định, chiến dịch được mở rộng, nhân nhóm, tăng ngân sách và triển khai nội dung
+                        mới,
+                        giúp doanh nghiệp tăng trưởng bền vững.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lp-types-section">
+            <h2 class="lp-section-title">Các hình thức quảng cáo TikTok Ads</h2>
+
+            <div class="lp-types-grid">
+
+                <div class="lp-type-box">
+                    <h3 class="lp-type-box-h3"><span class="lp-sticker neon-blue">In-Feed Ads</span> – Quảng cáo xuất hiện trong luồng video</h3>
+                    <p class="lp-type-box-p">
+                        Dạng quảng cáo phổ biến nhất.
+                        Video chạy tự nhiên trong luồng, giống video bình thường, giúp tăng tỷ lệ xem và tương tác cực cao.
+                        Phù hợp cho mọi ngành có nội dung cuốn hút.
+                    </p>
+                </div>
+
+                <div class="lp-type-box">
+                    <h3 class="lp-type-box-h3"><span class="lp-sticker neon-pink">Spark Ads</span> – Tăng trưởng từ chính video của bạn</h3>
+                    <p class="lp-type-box-p">
+                        Sử dụng video từ kênh TikTok của thương hiệu để chạy quảng cáo.
+                        Vừa tăng view – vừa tăng follow – vừa kéo tương tác tự nhiên trên kênh.
+                    </p>
+                </div>
+
+                <div class="lp-type-box">
+                    <h3 class="lp-type-box-h3"><span class="lp-sticker neon-mix">Lead Ads</span> – Quảng cáo thu khách hàng tiềm năng</h3>
+                    <p class="lp-type-box-p">
+                        Thu thập thông tin khách ngay trong TikTok mà không cần website.
+                        Form đẹp, dễ bấm, chuyển đổi cao cho ngành giáo dục – khoá học – tài chính – bất động sản.
+                    </p>
+                </div>
+
+                <div class="lp-type-box">
+                    <h3 class="lp-type-box-h3"><span class="lp-sticker neon-blue">Ecommerce Ads</span> – Quảng cáo cho TikTok Shop</h3>
+                    <p class="lp-type-box-p">
+                        Đẩy traffic về TikTok Shop, tăng đơn nhanh, phù hợp ngành mỹ phẩm – thời trang – phụ kiện – đồ gia
+                        dụng.
+                        Tối ưu bởi thuật toán thương mại điện tử TikTok.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="lp-commit-section">
+            <h2 class="lp-section-title">Cam kết từ Sota Agency</h2>
+
+            <div class="lp-commit-grid">
+
+                <div class="lp-commit-card">
+                    <div class="lp-strike strike-blue"></div>
+                    <h3 class="lp-commit-card-h3">Nhắm đúng khách hàng – chi phí tối ưu</h3>
+                    <p class="lp-commit-card-p">
+                        Sota sử dụng hệ thống phân tích dữ liệu chuyên sâu, lựa chọn tệp đối tượng chuẩn theo hành vi xem
+                        video,
+                        đảm bảo chi phí trên mỗi kết quả luôn tối ưu.
+                    </p>
+                </div>
+
+                <div class="lp-commit-card">
+                    <div class="lp-strike strike-pink"></div>
+                    <h3 class="lp-commit-card-h3">Nội dung sáng tạo – thu hút trong 3 giây</h3>
+                    <p class="lp-commit-card-p">
+                        Video TikTok là yếu tố sống còn.
+                        Chúng tôi xây dựng nội dung theo cảm xúc, trend, hành vi cuộn video,
+                        tạo ra nội dung dễ viral và bùng nổ đơn hàng.
+                    </p>
+                </div>
+
+                <div class="lp-commit-card">
+                    <div class="lp-strike strike-mix"></div>
+                    <h3 class="lp-commit-card-h3">Báo cáo rõ ràng – minh bạch – liên tục</h3>
+                    <p class="lp-commit-card-p">
+                        Theo dõi số liệu mỗi ngày: lượt xem, tỷ lệ chuyển đổi, chi phí, tệp tuổi, thời gian xem…
+                        Khách hàng nắm rõ toàn bộ quá trình.
+                    </p>
+                </div>
+
+                <div class="lp-commit-card">
+                    <div class="lp-strike strike-blue"></div>
+                    <h3 class="lp-commit-card-h3">Đồng hành 24/7 – hỗ trợ nhanh chóng</h3>
+                    <p class="lp-commit-card-p">
+                        Hỗ trợ qua Zalo, Messenger và điện thoại.
+                        Đội ngũ chăm sóc khách hàng giàu kinh nghiệm, phản hồi trong 5–10 phút.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="lp-pricing-section" id="contact">
+            <h2 class="lp-section-title">Bảng giá TikTok Ads & Nhận tư vấn</h2>
+
+            <div class="lp-pricing-layout">
+
+                <div class="lp-pricing-content">
+                    <h3 class="lp-pricing-content-h3">Gói 5 triệu – Khởi động & thử nghiệm thị trường</h3>
+                    <p class="lp-pricing-content-p">
+                        Phù hợp doanh nghiệp muốn kiểm tra độ phù hợp sản phẩm trên TikTok,
+                        đồng thời đo lường chỉ số quan trọng trước khi scale lớn.
+                    </p>
+
+                    <h3 class="lp-pricing-content-h3">Gói 10–20 triệu – Tối ưu & bắt đầu scale</h3>
+                    <p class="lp-pricing-content-p">
+                        Giảm chi phí, tăng chuyển đổi, tăng đơn hàng đều mỗi ngày.
+                        Hợp cho ngành thời trang, mỹ phẩm, phụ kiện, dịch vụ.
+                    </p>
+
+                    <h3 class="lp-pricing-content-h3">Gói theo yêu cầu – Chiến dịch quy mô lớn</h3>
+                    <p class="lp-pricing-content-p">
+                        Dành cho thương hiệu muốn phủ sóng TikTok mạnh mẽ, triển khai đa nhóm quảng cáo,
+                        remarketing & mở rộng ra toàn quốc.
+                    </p>
+                </div>
+
+                <form class="lp-contact-form">
+                    <h3 class="lp-contact-form-h3">Đăng ký tư vấn miễn phí</h3>
+                    <input type="text" placeholder="Họ và tên">
+                    <input type="tel" placeholder="Số điện thoại">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Mô tả nhu cầu của bạn..."></textarea>
+                    <button>Gửi thông tin</button>
+                </form>
+
+            </div>
+        </section>
+    </div>
+
+      <!-- CTA Fixed Start -->
+    <a href="hotro.html" class="lux-cta-btn">
+        <i class="fa fa-comments me-2"></i> Tư vấn ngay
+    </a>
+    <!-- CTA Fixed End -->
+    <!-- FOOTER -->
+    <div id="footer"></div>
+    <script>
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("footer").innerHTML = html);
+    </script>
+
+
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+    <!--tuyết rới-->
+    <img id="santa" src="https://clipart-library.com/2024/picture-of-cartoon-santa/picture-of-cartoon-santa-3.png"
+        alt="Santa Claus">
+    <canvas id="snowCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('snowCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let W = window.innerWidth;
+        let H = window.innerHeight;
+        canvas.width = W;
+        canvas.height = H;
+
+        // Tạo mảng tuyết
+        let mf = 150; // số lượng bông tuyết
+        let flakes = [];
+        for (let i = 0; i < mf; i++) {
+            flakes.push({
+                x: Math.random() * W,
+                y: Math.random() * H,
+                r: Math.random() * 4 + 1,
+                d: Math.random() * mf
+            });
+        }
+
+        // Vị trí Santa
+        let santa = {
+            x: 20,
+            y: H - 100,
+            width: 80,
+            height: 80,
+            offset: 0,
+            dir: 1
+        };
+
+        // Vẽ bông tuyết + Santa
+        function drawFlakes() {
+            ctx.clearRect(0, 0, W, H);
+
+            // Vẽ tuyết
+            ctx.fillStyle = "white";
+            ctx.beginPath();
+            for (let i = 0; i < mf; i++) {
+                let f = flakes[i];
+                ctx.moveTo(f.x, f.y);
+                ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, true);
+            }
+            ctx.fill();
+            moveFlakes();
+
+            // Vẽ Santa nhún nhẹ
+            if (santaImg.complete) { // đảm bảo ảnh tải xong
+                santa.offset += 0.5 * santa.dir;
+                if (santa.offset > 5 || santa.offset < 0) santa.dir *= -1;
+                ctx.drawImage(santaImg, santa.x, santa.y - santa.offset, santa.width, santa.height);
+            }
+        }
+
+        // Di chuyển bông tuyết
+        let angle = 0;
+        function moveFlakes() {
+            angle += 0.01;
+            for (let i = 0; i < mf; i++) {
+                let f = flakes[i];
+                f.y += Math.cos(angle + f.d) + 1 + f.r / 2;
+                f.x += Math.sin(angle) * 2;
+
+                if (f.x > W + 5 || f.x < -5 || f.y > H) {
+                    if (i % 3 > 0) {
+                        flakes[i] = { x: Math.random() * W, y: -10, r: f.r, d: f.d };
+                    } else {
+                        if (Math.sin(angle) > 0) {
+                            flakes[i] = { x: -5, y: Math.random() * H, r: f.r, d: f.d };
+                        } else {
+                            flakes[i] = { x: W + 5, y: Math.random() * H, r: f.r, d: f.d };
+                        }
+                    }
+                }
+            }
+        }
+
+        // Animate
+        setInterval(drawFlakes, 25);
+
+        // Resize canvas khi đổi kích thước màn hình
+        window.addEventListener('resize', () => {
+            W = window.innerWidth;
+            H = window.innerHeight;
+            canvas.width = W;
+            canvas.height = H;
+            santa.y = H - 100; // cập nhật vị trí Santa
+        });
+    </script>
+
+    <script>
+        // Optional: show alert on submit
+        const newsletterForm = document.querySelector('.lux-newsletter-form');
+        newsletterForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert("Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ sớm.");
+            newsletterForm.reset();
+        });
+    </script>
+    <script>
+        document.querySelectorAll(".step-item").forEach(item => {
+            const text = item.getAttribute("data-desc");
+            item.querySelector(".step-popup").innerText = text;
+        });
+    </script>
+
+</body>
+
+</html>

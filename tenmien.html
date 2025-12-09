@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="css/style.css?v=1.3">
+    <style>
+        /* RESET */
+        .lp-domain-extended-container * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            color: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        .lp-domain-extended-container {
+            background: #ffffff;
+            color: #1A202C;
+            line-height: 1.65;
+            margin: 0 auto;
+        }
+
+        /* Domain Extended Colors (Sử dụng lại tông Cyan và Dark) */
+        :root {
+            --domain-cyan: #00BFFF; /* Xanh Cyan Chính */
+            --domain-dark: #1A202C; /* Đen đậm */
+            --domain-safe: #38A169; /* Xanh lá cây (An toàn) */
+            --domain-light-bg: #F7FAFC; /* Nền xám rất nhạt */
+            --domain-price: #FF4500; /* Màu giá (Cam) */
+        }
+
+        /* ==================== UTILITIES & TYPOGRAPHY ==================== */
+
+        .lp-domain-extended-container .lp-section-title {
+            font-size: 38px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            color: var(--domain-dark);
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .lp-domain-extended-container .lp-section-subtitle {
+            font-size: 19px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .lp-domain-extended-container section {
+            padding: 80px 5%;
+            overflow: hidden; /* Clear floats/margins */
+        }
+        
+        .lp-domain-extended-container .lp-inner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Main Button Style */
+        .lp-domain-extended-container .lp-main-btn {
+            padding: 14px 30px;
+            background: var(--domain-cyan);
+            color: var(--domain-dark);
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: .3s;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+        
+        .lp-domain-extended-container .lp-main-btn:hover {
+            background: #0088CC;
+            color: #ffffff;
+        }
+
+        /* ==================== 1. HEADER & SEARCH ==================== */
+
+        .lp-domain-extended-container .lp-banner-search-section {
+            padding: 120px 5%;
+            background: var(--domain-dark);
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .lp-domain-extended-container .lp-banner-heading-h1 {
+            font-size: 52px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.2;
+        }
+
+        .lp-domain-extended-container .lp-banner-p {
+            font-size: 20px;
+            opacity: 0.85;
+            margin-bottom: 40px;
+        }
+
+        .lp-domain-extended-container .lp-search-box {
+            display: flex;
+            max-width: 700px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            height: 65px;
+        }
+
+        .lp-domain-extended-container .lp-search-input {
+            flex-grow: 1;
+            padding: 0 25px;
+            border: none;
+            font-size: 18px;
+            color: var(--domain-dark);
+            outline: none;
+        }
+        
+        .lp-domain-extended-container .lp-search-btn {
+            padding: 0 35px;
+            background: var(--domain-cyan);
+            color: var(--domain-dark);
+            border: none;
+            font-weight: bold;
+            font-size: 19px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .lp-domain-extended-container .lp-search-btn:hover {
+            background: #0088CC;
+            color: #ffffff;
+        }
+
+        /* ==================== 2. WHY CHOOSE US ==================== */
+
+        .lp-domain-extended-container .lp-why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .lp-domain-extended-container .lp-why-item {
+            background: var(--domain-light-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid var(--domain-safe);
+            transition: box-shadow 0.3s;
+        }
+        
+        .lp-domain-extended-container .lp-why-item:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .lp-domain-extended-container .lp-why-item-h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--domain-dark);
+            margin-bottom: 10px;
+        }
+
+        .lp-domain-extended-container .lp-why-item-h3 i {
+            color: var(--domain-cyan);
+            margin-right: 12px;
+        }
+
+        .lp-domain-extended-container .lp-why-desc-p {
+            color: #555;
+            font-size: 17px;
+        }
+
+        /* ==================== 3. PRICING TABLE ==================== */
+
+        .lp-domain-extended-container .lp-pricing-section {
+            background: var(--domain-light-bg);
+        }
+
+        .lp-domain-extended-container .lp-pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            background: #ffffff;
+            font-size: 17px;
+        }
+
+        .lp-domain-extended-container .lp-pricing-table th,
+        .lp-domain-extended-container .lp-pricing-table td {
+            padding: 15px;
+            border: 1px solid #eee;
+            text-align: left;
+        }
+
+        .lp-domain-extended-container .lp-pricing-table th {
+            background: var(--domain-dark);
+            color: #ffffff;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .lp-domain-extended-container .lp-pricing-table tr:nth-child(even) {
+            background: #fcfcfc;
+        }
+        
+        .lp-domain-extended-container .lp-pricing-table tr:hover {
+            background: #f1f1f1;
+        }
+        
+        .lp-domain-extended-container .lp-price-new {
+            color: var(--domain-price);
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        .lp-domain-extended-container .lp-price-old {
+            text-decoration: line-through;
+            color: #999;
+            margin-right: 10px;
+        }
+
+        .lp-domain-extended-container .lp-price-cta {
+            background: var(--domain-safe);
+            color: #ffffff;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .lp-domain-extended-container .lp-price-cta:hover {
+            background: #2E8B57;
+        }
+        
+        .lp-domain-extended-container .lp-note-pricing {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #777;
+            text-align: right;
+        }
+
+        /* ==================== 4. VALUE-ADDED SERVICES (Same as previous) ==================== */
+
+        .lp-domain-extended-container .lp-value-section {
+            background: #ffffff;
+        }
+
+        .lp-domain-extended-container .lp-value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .lp-domain-extended-container .lp-value-item {
+            background: var(--domain-light-bg);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-bottom: 4px solid var(--domain-cyan);
+        }
+
+        .lp-domain-extended-container .lp-value-item-h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--domain-dark);
+            margin-bottom: 10px;
+        }
+
+        .lp-domain-extended-container .lp-value-item-h3 i {
+            color: var(--domain-safe);
+            margin-right: 10px;
+        }
+
+        .lp-domain-extended-container .lp-value-item-p {
+            font-size: 17px;
+            color: #555;
+        }
+
+        /* ==================== 5. TESTIMONIALS ==================== */
+        
+        .lp-domain-extended-container .lp-testimonial-section {
+            background: var(--domain-dark);
+            color: #ffffff;
+            padding: 80px 5%;
+        }
+
+        .lp-domain-extended-container .lp-testimonial-section .lp-section-title {
+            color: #ffffff;
+        }
+        
+        .lp-domain-extended-container .lp-testimonial-section .lp-section-subtitle {
+            color: #ccc;
+        }
+
+        .lp-domain-extended-container .lp-testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .lp-domain-extended-container .lp-testimonial-card {
+            background: #2C3E50; /* Darker card background */
+            padding: 30px;
+            border-radius: 12px;
+            border-top: 3px solid var(--domain-cyan);
+        }
+
+        .lp-domain-extended-container .lp-quote-p {
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 17px;
+            color: #ddd;
+        }
+
+        .lp-domain-extended-container .lp-customer-name {
+            font-weight: bold;
+            color: var(--domain-cyan);
+            display: block;
+            font-size: 18px;
+        }
+
+        .lp-domain-extended-container .lp-customer-title {
+            font-size: 15px;
+            color: #aaa;
+        }
+
+        /* ==================== 6. TECHNICAL SPECS (Thông số kỹ thuật) ==================== */
+        
+        .lp-domain-extended-container .lp-tech-section {
+            background: #ffffff;
+        }
+
+        .lp-domain-extended-container .lp-tech-grid {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .lp-domain-extended-container .lp-tech-list {
+            list-style: none;
+            flex: 1;
+            min-width: 350px;
+        }
+
+        .lp-domain-extended-container .lp-tech-list li {
+            border-bottom: 1px dashed #ddd;
+            padding: 12px 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 17px;
+        }
+
+        .lp-domain-extended-container .lp-tech-label {
+            font-weight: 700;
+            color: var(--domain-dark);
+        }
+        
+        .lp-domain-extended-container .lp-tech-value {
+            color: var(--domain-safe);
+            font-weight: 500;
+        }
+        
+        .lp-domain-extended-container .lp-tech-value i {
+            color: var(--domain-cyan);
+        }
+        
+        /* ==================== 7. FAQ ==================== */
+
+        .lp-domain-extended-container .lp-faq-section {
+            background: var(--domain-light-bg);
+        }
+
+        .lp-domain-extended-container .lp-faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .lp-domain-extended-container .lp-faq-item {
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+        
+        .lp-domain-extended-container .lp-faq-question {
+            padding: 18px;
+            background: var(--domain-dark);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 18px;
+            cursor: pointer;
+            display: block;
+        }
+
+        .lp-domain-extended-container .lp-faq-answer {
+            padding: 15px 18px;
+            border-top: 1px solid #eee;
+            font-size: 17px;
+            color: #444;
+        }
+
+        /* ==================== 8. FINAL CTA & FOOTER ==================== */
+
+        .lp-domain-extended-container .lp-final-cta-section {
+            background: var(--domain-cyan);
+            text-align: center;
+            padding: 50px 5%;
+        }
+
+        .lp-domain-extended-container .lp-final-cta-h2 {
+            font-size: 32px;
+            color: var(--domain-dark);
+            font-weight: 900;
+            margin-bottom: 25px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .lp-domain-extended-container footer {
+            background: #111;
+            color: #eee;
+            text-align: center;
+            padding: 20px 5%;
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .lp-domain-extended-container .lp-banner-heading-h1 {
+                font-size: 38px;
+            }
+            .lp-domain-extended-container .lp-section-title {
+                font-size: 30px;
+            }
+            .lp-domain-extended-container .lp-search-box {
+                height: 55px;
+            }
+            .lp-domain-extended-container .lp-search-input {
+                padding: 0 15px;
+            }
+            .lp-domain-extended-container .lp-search-btn {
+                padding: 0 20px;
+            }
+            .lp-domain-extended-container .lp-pricing-table th,
+            .lp-domain-extended-container .lp-pricing-table td {
+                padding: 10px;
+                font-size: 15px;
+            }
+            .lp-domain-extended-container .lp-final-cta-h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+        <!-- NAVBAR -->
+    <div id="navbar"></div>
+    <script>
+        fetch("navbar.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("navbar").innerHTML = html);
+    </script>
+    <div class="lp-domain-extended-container">
+        
+        <section class="lp-banner-search-section" id="search-box">
+            <div class="lp-inner-content">
+                <h1 class="lp-banner-heading-h1">
+                    Đăng Ký & Quản Lý Tên Miền Đơn Giản, Bảo Mật Cao
+                </h1>
+                <p class="lp-banner-p">
+                    Hơn 100+ phần mở rộng tên miền (.com, .vn, .net,...) với mức giá cạnh tranh nhất và dịch vụ hỗ trợ 24/7.
+                </p>
+                <div class="lp-search-box">
+                    <input type="text" class="lp-search-input" placeholder="Nhập tên miền bạn muốn tìm (VD: tencongty)">
+                    <button class="lp-search-btn">
+                        <i class="fas fa-search"></i> Tra cứu
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="lp-why-section">
+            <div class="lp-inner-content">
+                <h2 class="lp-section-title">Tại sao hàng ngàn khách hàng tin tưởng chúng tôi?</h2>
+                <p class="lp-section-subtitle">
+                    Chúng tôi không chỉ bán tên miền, chúng tôi cung cấp giải pháp xây dựng thương hiệu số bền vững.
+                </p>
+                
+                <div class="lp-why-grid">
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3"><i class="fas fa-handshake"></i> Cam kết Giá Rẻ nhất Thị trường</h3>
+                        <p class="lp-why-desc-p">
+                            Mức giá ưu đãi cho năm đầu tiên và giá gia hạn minh bạch, cạnh tranh, không có chi phí ẩn.
+                        </p>
+                    </article>
+
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3"><i class="fas fa-globe"></i> Đại lý Chính thức Tên miền Việt Nam (.vn)</h3>
+                        <p class="lp-why-desc-p">
+                            Thủ tục đăng ký và chuyển đổi tên miền .vn nhanh chóng, tuân thủ đúng quy định của VNNIC.
+                        </p>
+                    </article>
+
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3"><i class="fas fa-shield-alt"></i> Bảo mật Tên miền Toàn diện</h3>
+                        <p class="lp-why-desc-p">
+                            Tích hợp DNSSEC, WHOIS Protection (miễn phí) và Domain Lock để bảo vệ tài sản số của bạn.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="lp-pricing-section" id="pricing">
+            <div class="lp-inner-content">
+                <h2 class="lp-section-title">Bảng Giá Tên miền Phổ biến (Năm đầu)</h2>
+                <p class="lp-section-subtitle">
+                    Kiểm tra và đăng ký các phần mở rộng phổ biến với ưu đãi đặc biệt.
+                </p>
+                
+                <table class="lp-pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Phần mở rộng</th>
+                            <th>Đăng ký (1 năm)</th>
+                            <th>Giá gia hạn (1 năm)</th>
+                            <th>Tiện ích miễn phí</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>.com</td>
+                            <td class="lp-price-new"><span class="lp-price-old">289.000 VNĐ</span> 199.000 VNĐ</td>
+                            <td>389.000 VNĐ</td>
+                            <td>WHOIS Protection, DNS Premium</td>
+                            <td><a href="#search-box" class="lp-price-cta">Mua ngay</a></td>
+                        </tr>
+                        <tr>
+                            <td>.vn</td>
+                            <td class="lp-price-new">550.000 VNĐ</td>
+                            <td>750.000 VNĐ</td>
+                            <td>DNS Anycast, Hỗ trợ VNNIC</td>
+                            <td><a href="#search-box" class="lp-price-cta">Mua ngay</a></td>
+                        </tr>
+                        <tr>
+                            <td>.net</td>
+                            <td class="lp-price-new"><span class="lp-price-old">319.000 VNĐ</span> 249.000 VNĐ</td>
+                            <td>419.000 VNĐ</td>
+                            <td>WHOIS Protection, Domain Lock</td>
+                            <td><a href="#search-box" class="lp-price-cta">Mua ngay</a></td>
+                        </tr>
+                        <tr>
+                            <td>.com.vn</td>
+                            <td class="lp-price-new">450.000 VNĐ</td>
+                            <td>650.000 VNĐ</td>
+                            <td>DNS Anycast, Hỗ trợ VNNIC</td>
+                            <td><a href="#search-box" class="lp-price-cta">Mua ngay</a></td>
+                        </tr>
+                        <tr>
+                            <td>.info</td>
+                            <td class="lp-price-new">99.000 VNĐ</td>
+                            <td>399.000 VNĐ</td>
+                            <td>WHOIS Protection</td>
+                            <td><a href="#search-box" class="lp-price-cta">Mua ngay</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p class="lp-note-pricing">
+                    *Mức giá ưu đãi áp dụng cho năm đăng ký đầu tiên. Vui lòng liên hệ để nhận báo giá Tên miền Đặc biệt (.io, .ai, .app,...)
+                </p>
+            </div>
+        </section>
+
+        <section class="lp-value-section">
+            <div class="lp-inner-content">
+                <h2 class="lp-section-title">Tất cả tên miền đều đi kèm các dịch vụ giá trị gia tăng</h2>
+                <p class="lp-section-subtitle">
+                    Chúng tôi đảm bảo tên miền của bạn được quản lý hiệu quả và an toàn tuyệt đối.
+                </p>
+
+                <div class="lp-value-grid">
+                    <div class="lp-value-item">
+                        <h3 class="lp-value-item-h3"><i class="fas fa-headset"></i> Hỗ trợ Kỹ thuật 24/7</h3>
+                        <p class="lp-value-item-p">
+                            Đội ngũ chuyên gia sẵn sàng hỗ trợ bạn cấu hình DNS, trỏ tên miền hoặc xử lý sự cố bất cứ lúc nào qua Điện thoại, Chat, Ticket.
+                        </p>
+                    </div>
+                    <div class="lp-value-item">
+                        <h3 class="lp-value-item-h3"><i class="fas fa-shield-alt"></i> Bảo mật DNSSEC</h3>
+                        <p class="lp-value-item-p">
+                            Chống lại các cuộc tấn công DNS Spoofing và Cache Poisoning, đảm bảo khách hàng luôn được đưa đến đúng website của bạn.
+                        </p>
+                    </div>
+                    <div class="lp-value-item">
+                        <h3 class="lp-value-item-h3"><i class="fas fa-exchange-alt"></i> Chuyển đổi Dễ dàng</h3>
+                        <p class="lp-value-item-p">
+                            Hỗ trợ chuyển tên miền từ nhà cung cấp khác về hệ thống của chúng tôi nhanh chóng, không gián đoạn dịch vụ.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="lp-testimonial-section">
+            <div class="lp-inner-content">
+                <h2 class="lp-section-title">Khách hàng nói gì về chúng tôi?</h2>
+                <p class="lp-section-subtitle">
+                    Uy tín của chúng tôi được xây dựng dựa trên sự hài lòng của khách hàng doanh nghiệp và cá nhân.
+                </p>
+                
+                <div class="lp-testimonial-grid">
+                    <div class="lp-testimonial-card">
+                        <p class="lp-quote-p">"Tên miền được kích hoạt cực kỳ nhanh chóng. Quan trọng nhất là dịch vụ WHOIS Protection miễn phí giúp tôi yên tâm về thông tin cá nhân."</p>
+                        <span class="lp-customer-name">Anh Trần Văn A</span>
+                        <span class="lp-customer-title">CEO Startup Công nghệ</span>
+                    </div>
+                    <div class="lp-testimonial-card">
+                        <p class="lp-quote-p">"Chúng tôi đã chuyển 15 tên miền .vn về đây. Quy trình chuyển đổi đơn giản và được hỗ trợ tận tình theo đúng quy định của VNNIC."</p>
+                        <span class="lp-customer-name">Chị Nguyễn Thị B</span>
+                        <span class="lp-customer-title">Trưởng phòng IT Công ty X</span>
+                    </div>
+                    <div class="lp-testimonial-card">
+                        <p class="lp-quote-p">"Hệ thống quản lý DNS rất trực quan và ổn định. Tôi dễ dàng trỏ tên miền về Hosting và cấu hình Email Server mà không cần gọi hỗ trợ."</p>
+                        <span class="lp-customer-name">Ông Lê Hữu C</span>
+                        <span class="lp-customer-title">Chủ Doanh nghiệp Vừa và Nhỏ</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lp-tech-section">
+            <div class="lp-inner-content">
+                <h2 class="lp-section-title">Thông số Kỹ thuật Nền tảng Tên miền</h2>
+                <p class="lp-section-subtitle">
+                    Chi tiết về công nghệ chúng tôi sử dụng để đảm bảo hiệu suất và độ tin cậy.
+                </p>
+
+                <div class="lp-tech-grid">
+                    <ul class="lp-tech-list">
+                        <li>
+                            <span class="lp-tech-label">Thời gian hoạt động DNS (Uptime)</span>
+                            <span class="lp-tech-value">99.99%</span>
+                        </li>
+                        <li>
+                            <span class="lp-tech-label">Công nghệ Mạng lưới DNS</span>
+                            <span class="lp-tech-value">Anycast Global Network</span>
+                        </li>
+                        <li>
+                            <span class="lp-tech-label">Bảo mật Tên miền</span>
+                            <span class="lp-tech-value">DNSSEC <i class="fas fa-check-circle"></i></span>
+                        </li>
+                        <li>
+                            <span class="lp-tech-label">Bảo vệ Thông tin (WHOIS)</span>
+                            <span class="lp-tech-value">Miễn phí trọn đời</span>
+                        </li>
+                        
+                    </ul>
+                    <ul class="lp-tech-list">
+                        <li>
+                            <span class="lp-tech-label">Hỗ trợ Bản ghi (Records)</span>
+                            <span class="lp-tech-value">A, CNAME, MX, TXT, SRV, CAA</span>
+                        </li>
+                        <li>
+                            <span class="lp-tech-label">Khóa Chuyển giao (Domain Lock)</span>
+                            <span class="lp-tech-value">Được bật mặc định</span>
+                        </li>
+                        <li>
+                            <span class="lp-tech-label">Thời gian phân giải</span>
+                            <span class="lp-tech-value">< 50ms</span>
+                        </li>
+                        <li>
+                            <span class="lp-tech-label">Cảnh báo Gia hạn</span>
+                            <span class="lp-tech-value">Email và SMS</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="lp-faq-section">
+            <div class="lp-inner-content">
+                <h2 class="lp-section-title">Các Câu Hỏi Thường Gặp (FAQ)</h2>
+                <p class="lp-section-subtitle">
+                    Giải đáp các thắc mắc phổ biến nhất của khách hàng về dịch vụ tên miền.
+                </p>
+                
+                <div class="lp-faq-list">
+                    <div class="lp-faq-item">
+                        <h3 class="lp-faq-question">Tôi cần chuẩn bị gì để đăng ký tên miền .vn?</h3>
+                        <div class="lp-faq-answer">
+                            Đối với tên miền .vn, bạn cần cung cấp Chứng minh nhân dân/Căn cước công dân (cá nhân) hoặc Giấy phép kinh doanh (tổ chức) để hoàn tất thủ tục khai báo chính thức với VNNIC.
+                        </div>
+                    </div>
+                    <div class="lp-faq-item">
+                        <h3 class="lp-faq-question">WHOIS Protection là gì và tại sao tôi cần nó?</h3>
+                        <div class="lp-faq-answer">
+                            WHOIS Protection (Ẩn thông tin WHOIS) giúp thay thế thông tin cá nhân của bạn bằng thông tin của nhà đăng ký trên các công cụ tra cứu công khai, ngăn chặn spam và các mối đe dọa bảo mật. Dịch vụ này là miễn phí tại đây.
+                        </div>
+                    </div>
+                    <div class="lp-faq-item">
+                        <h3 class="lp-faq-question">Làm thế nào để chuyển tên miền về nhà cung cấp của bạn?</h3>
+                        <div class="lp-faq-answer">
+                            Bạn chỉ cần lấy Mã EPP Code (Auth Code) từ nhà cung cấp cũ. Sau khi bạn đặt lệnh chuyển, chúng tôi sẽ hướng dẫn bạn quy trình xác nhận và hoàn tất thủ tục chuyển đổi trong vòng 5-7 ngày làm việc.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lp-final-cta-section">
+            <div class="lp-inner-content">
+                <h2 class="lp-final-cta-h2">Đã đến lúc bảo vệ thương hiệu số của bạn.</h2>
+                <a href="#search-box" class="lp-main-btn">Bắt đầu Tra cứu Tên miền Ngay</a>
+            </div>
+        </section>
+        
+    </div>
+
+
+
+      <!-- CTA Fixed Start -->
+    <a href="hotro.html" class="lux-cta-btn">
+        <i class="fa fa-comments me-2"></i> Tư vấn ngay
+    </a>
+    <!-- CTA Fixed End -->
+    <!-- FOOTER -->
+    <div id="footer"></div>
+    <script>
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("footer").innerHTML = html);
+    </script>
+
+
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+    <!--tuyết rới-->
+    <img id="santa" src="https://clipart-library.com/2024/picture-of-cartoon-santa/picture-of-cartoon-santa-3.png"
+        alt="Santa Claus">
+    <canvas id="snowCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('snowCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let W = window.innerWidth;
+        let H = window.innerHeight;
+        canvas.width = W;
+        canvas.height = H;
+
+        // Tạo mảng tuyết
+        let mf = 150; // số lượng bông tuyết
+        let flakes = [];
+        for (let i = 0; i < mf; i++) {
+            flakes.push({
+                x: Math.random() * W,
+                y: Math.random() * H,
+                r: Math.random() * 4 + 1,
+                d: Math.random() * mf
+            });
+        }
+
+        // Vị trí Santa
+        let santa = {
+            x: 20,
+            y: H - 100,
+            width: 80,
+            height: 80,
+            offset: 0,
+            dir: 1
+        };
+
+        // Vẽ bông tuyết + Santa
+        function drawFlakes() {
+            ctx.clearRect(0, 0, W, H);
+
+            // Vẽ tuyết
+            ctx.fillStyle = "white";
+            ctx.beginPath();
+            for (let i = 0; i < mf; i++) {
+                let f = flakes[i];
+                ctx.moveTo(f.x, f.y);
+                ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, true);
+            }
+            ctx.fill();
+            moveFlakes();
+
+            // Vẽ Santa nhún nhẹ
+            if (santaImg.complete) { // đảm bảo ảnh tải xong
+                santa.offset += 0.5 * santa.dir;
+                if (santa.offset > 5 || santa.offset < 0) santa.dir *= -1;
+                ctx.drawImage(santaImg, santa.x, santa.y - santa.offset, santa.width, santa.height);
+            }
+        }
+
+        // Di chuyển bông tuyết
+        let angle = 0;
+        function moveFlakes() {
+            angle += 0.01;
+            for (let i = 0; i < mf; i++) {
+                let f = flakes[i];
+                f.y += Math.cos(angle + f.d) + 1 + f.r / 2;
+                f.x += Math.sin(angle) * 2;
+
+                if (f.x > W + 5 || f.x < -5 || f.y > H) {
+                    if (i % 3 > 0) {
+                        flakes[i] = { x: Math.random() * W, y: -10, r: f.r, d: f.d };
+                    } else {
+                        if (Math.sin(angle) > 0) {
+                            flakes[i] = { x: -5, y: Math.random() * H, r: f.r, d: f.d };
+                        } else {
+                            flakes[i] = { x: W + 5, y: Math.random() * H, r: f.r, d: f.d };
+                        }
+                    }
+                }
+            }
+        }
+
+        // Animate
+        setInterval(drawFlakes, 25);
+
+        // Resize canvas khi đổi kích thước màn hình
+        window.addEventListener('resize', () => {
+            W = window.innerWidth;
+            H = window.innerHeight;
+            canvas.width = W;
+            canvas.height = H;
+            santa.y = H - 100; // cập nhật vị trí Santa
+        });
+    </script>
+
+    <script>
+        // Optional: show alert on submit
+        const newsletterForm = document.querySelector('.lux-newsletter-form');
+        newsletterForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert("Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ sớm.");
+            newsletterForm.reset();
+        });
+    </script>
+    <script>
+        document.querySelectorAll(".step-item").forEach(item => {
+            const text = item.getAttribute("data-desc");
+            item.querySelector(".step-popup").innerText = text;
+        });
+    </script>
+
+</body>
+
+</html>

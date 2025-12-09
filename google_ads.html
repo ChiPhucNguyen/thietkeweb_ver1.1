@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="css/style.css?v=1.3">
+    <title>Website Bán Hàng Chuyên Nghiệp</title>
+    <style>
+        .googleads-wrapper {
+            padding: 0px 50px;
+            font-family: 'Segoe UI', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        /* HIGHLIGHT */
+        .hl-blue {
+            background: #4285F4;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .hl-red {
+            background: #EA4335;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .hl-yellow {
+            background: #FBBC05;
+            color: #000;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .hl-green {
+            background: #34A853;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .googleads-hero-2 {
+            width: 100%;
+            padding: 100px 60px;
+            border-radius: 0;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+
+            background: linear-gradient(135deg,
+                    #4285F4 0%,
+                    #34A853 30%,
+                    #FBBC05 65%,
+                    #EA4335 100%);
+            background-size: 300% 300%;
+            animation: gradientMove 12s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .ga-hero-content {
+            max-width: 780px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .googleads-hero-2 h1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .mark-blue {
+            background: #fff;
+            color: #4285F4;
+            padding: 6px 14px;
+            border-radius: 10px;
+            font-weight: 800;
+        }
+
+        .ga-sub {
+            font-size: 22px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.92);
+            margin-bottom: 35px;
+        }
+
+        .ga-hero-buttons a {
+            display: inline-block;
+            padding: 14px 28px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 12px;
+            margin-right: 15px;
+            transition: .25s;
+        }
+
+        .btn-ga-primary {
+            background: #fff;
+            color: #4285F4;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-ga-primary:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn-ga-outline {
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        .btn-ga-outline:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+        }
+
+        .ga-hero-stickers span {
+            position: absolute;
+            font-size: 50px;
+            opacity: 0.9;
+            animation: floatSticker 6s ease-in-out infinite;
+        }
+
+        .s1 {
+            top: 20%;
+            right: 12%;
+            animation-delay: 0s;
+        }
+
+        .s2 {
+            top: 55%;
+            right: 5%;
+            animation-delay: 1.2s;
+            font-size: 40px;
+        }
+
+        .s3 {
+            top: 75%;
+            right: 18%;
+            animation-delay: 0.8s;
+        }
+
+        .s4 {
+            top: 10%;
+            right: 28%;
+            animation-delay: 2.4s;
+            font-size: 42px;
+        }
+
+        @keyframes floatSticker {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .googleads-hero-2 {
+                padding: 80px 30px;
+            }
+
+            .googleads-hero-2 h1 {
+                font-size: 38px;
+            }
+
+            .ga-sub {
+                font-size: 18px;
+            }
+        }
+
+        .googleads-hero-2 {
+            width: 100vw;
+            /* luôn tràn toàn màn */
+            margin-left: calc(50% - 50vw);
+            /* fix container padding của website */
+            margin-right: calc(50% - 50vw);
+            /* giúp background tràn full từ mép trái đến mép phải */
+
+            padding: 100px 60px;
+            margin-bottom: 100px;
+            /* khoảng cách với section sau */
+
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+
+            background: linear-gradient(135deg,
+                    #4285F4 0%,
+                    #34A853 30%,
+                    #FBBC05 65%,
+                    #EA4335 100%);
+            background-size: 300% 300%;
+            animation: gradientMove 12s ease infinite;
+        }
+
+
+        /* 2 COLUMNS */
+        .ga-section {
+            margin-bottom: 80px;
+        }
+
+        .ga-section ul li {
+            margin: 10px 0;
+        }
+
+        .ga-section .ga-col {
+            width: 50%;
+            float: left;
+            padding: 20px;
+        }
+
+        .ga-section:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .big-sticker {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        /* SERVICES */
+        .ga-three-cols {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .ga-card {
+            background: #f8f8f8;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            position: relative;
+            transition: transform .25s;
+        }
+
+        .ga-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .ga-card .sticker {
+            font-size: 32px;
+            position: absolute;
+            top: -18px;
+            right: 15px;
+        }
+
+        .service-more {
+            margin-top: 35px;
+            font-size: 18px;
+            color: #444;
+        }
+
+        /* WORKFLOW */
+        /* ==== SECTION ==== */
+        .sota-process {
+            padding: 80px 40px;
+            background: #f7f9fc;
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            width: 80px;
+            height: 6px;
+            background: #4285f4;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            border-radius: 10px;
+        }
+
+        /* ==== PROCESS GRID ==== */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+        }
+
+        /* ==== PROCESS BOX ==== */
+        .process-item {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid #4285f4;
+            transition: 0.3s ease;
+        }
+
+        .process-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+        }
+
+        /* ==== ICON ==== */
+        .process-item .icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        /* ==== HIGHLIGHT TITLE ==== */
+        .highlight {
+            background: #fbbc05;
+            padding: 5px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        /* ==== TEXT ==== */
+        .process-item p {
+            font-size: 15px;
+            color: #444;
+            margin-top: 6px;
+            line-height: 1.55;
+        }
+
+        /* ==== RESPONSIVE ==== */
+        @media (max-width: 991px) {
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .google-ads-section {
+            padding: 60px 20px;
+            background: #f7f7f7;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+
+        .google-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            color: #222;
+            position: relative;
+        }
+
+        .google-ads-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .google-card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .google-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .google-card p {
+            margin-top: 15px;
+            color: #444;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        /* Sticker highlight sau chữ */
+        .highlight {
+            font-weight: 700;
+            font-size: 20px;
+            position: relative;
+            padding: 4px 8px;
+            display: inline-block;
+            z-index: 2;
+        }
+
+        .highlight::before {
+            content: "";
+            position: absolute;
+            left: -6px;
+            top: -4px;
+            width: 110%;
+            height: 130%;
+            z-index: -1;
+            border-radius: 6px;
+            opacity: 0.35;
+        }
+
+        /* Sticker màu theo tông Google */
+        .h-blue::before {
+            background: #4285F4;
+        }
+
+        .h-red::before {
+            background: #EA4335;
+        }
+
+        .h-yellow::before {
+            background: #FBBC05;
+        }
+
+        .h-green::before {
+            background: #34A853;
+        }
+
+        .commit-v2 {
+            padding: 80px 30px;
+            width: 100%;
+            background: #f8f9fc;
+        }
+
+        .commitv2-title {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 900;
+            margin-bottom: 60px;
+            letter-spacing: -1px;
+        }
+
+        .commitv2-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 40px;
+            margin-bottom: 90px;
+        }
+
+        .commitv2-item.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .commitv2-text {
+            flex: 1.2;
+        }
+
+        .commitv2-head span {
+            font-size: 30px;
+            font-weight: 800;
+            position: relative;
+            z-index: 2;
+            line-height: 1.3;
+            display: inline-block;
+        }
+
+        /* Sticker lớn phía sau chữ */
+        .commitv2-head span::before {
+            content: "";
+            position: absolute;
+            left: -14px;
+            bottom: 0;
+            width: 115%;
+            height: 60%;
+            background: #ffd54f;
+            opacity: 0.55;
+            z-index: -1;
+            transform: skew(-8deg);
+            border-radius: 6px;
+        }
+
+        .commitv2-text p {
+            font-size: 17px;
+            line-height: 1.65;
+            margin-top: 12px;
+            color: #333;
+            max-width: 620px;
+        }
+
+        /* Sticker lớn ngoài lề */
+        .commitv2-sticker {
+            flex: 0.7;
+            height: 130px;
+            border-radius: 12px;
+            transform: rotate(-3deg);
+            opacity: 0.9;
+        }
+
+        .commitv2-sticker-blue {
+            background: #4285f4;
+            box-shadow: 0 12px 26px rgba(66, 133, 244, 0.3);
+        }
+
+        .commitv2-sticker-red {
+            background: #ea4335;
+            box-shadow: 0 12px 26px rgba(234, 67, 53, 0.3);
+        }
+
+        .commitv2-sticker-yellow {
+            background: #fbbc05;
+            box-shadow: 0 12px 26px rgba(251, 188, 5, 0.35);
+        }
+
+        .commitv2-sticker-green {
+            background: #34a853;
+            box-shadow: 0 12px 26px rgba(52, 168, 83, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+
+            .commitv2-item,
+            .commitv2-item.reverse {
+                flex-direction: column;
+            }
+
+            .commitv2-sticker {
+                width: 100%;
+                height: 100px;
+            }
+        }
+
+        /* BẢNG GIÁ */
+        .googleads-pricing-v2 {
+            padding: 90px 40px;
+            background: #fff;
+        }
+
+        .gapv2-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 70px;
+        }
+
+        .gapv2-pricing-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 60px;
+        }
+
+        .gapv2-plan {
+            position: relative;
+            padding: 40px 30px;
+            border-left: 10px solid transparent;
+            background: #f5f7fa;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .gapv2-plan h3 span {
+            font-size: 30px;
+            font-weight: 800;
+            position: relative;
+            z-index: 2;
+        }
+
+        .gapv2-plan h3 span::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            bottom: 0;
+            width: 120%;
+            height: 45%;
+            background: #ffd54f;
+            opacity: 0.55;
+            transform: skew(-8deg);
+            border-radius: 5px;
+            z-index: -1;
+        }
+
+        .gapv2-plan p {
+            margin-top: 15px;
+            line-height: 1.65;
+            font-size: 17px;
+            color: #333;
+        }
+
+        /* Sticker */
+        .gapv2-sticker {
+            position: absolute;
+            right: -40px;
+            bottom: -40px;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            opacity: 0.35;
+        }
+
+        .gblue {
+            background: #4285f4;
+        }
+
+        .gyellow {
+            background: #fbbc05;
+        }
+
+        .ggreen {
+            background: #34a853;
+        }
+
+        .gapv2-note {
+            text-align: center;
+            margin-top: 50px;
+            font-style: italic;
+            color: #555;
+        }
+
+
+        /* LIÊN HỆ */
+        .googleads-contact-v2 {
+            display: flex;
+            gap: 60px;
+            padding: 100px 40px;
+            background: #eef3ff;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .contactv2-left {
+            flex: 1;
+        }
+
+        .contactv2-left h2 span {
+            font-size: 36px;
+            font-weight: 900;
+            position: relative;
+            display: inline-block;
+        }
+
+        .contactv2-left h2 span::before {
+            content: "";
+            position: absolute;
+            left: -12px;
+            bottom: 4px;
+            width: 120%;
+            height: 55%;
+            background: #ea4335;
+            opacity: 0.4;
+            transform: skew(-10deg);
+            border-radius: 6px;
+            z-index: -1;
+        }
+
+        .contactv2-left p {
+            margin-top: 20px;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .contactv2-left ul {
+            margin-top: 25px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .contactv2-left li {
+            margin-bottom: 12px;
+            font-size: 17px;
+        }
+
+        /* FORM */
+        .contactv2-form {
+            background: #fff;
+            padding: 40px 35px;
+            border-radius: 18px;
+            flex: 1;
+            min-width: 350px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.07);
+        }
+
+        .contactv2-form h3 {
+            font-size: 26px;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+
+        .contactv2-form input,
+        .contactv2-form textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 18px;
+            font-size: 15px;
+        }
+
+        .contactv2-form textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .contactv2-form button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(90deg, #4285f4, #34a853);
+            border: none;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .contactv2-form button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .googleads-contact-v2 {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div id="navbar"></div>
+    <script>
+        fetch("navbar.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("navbar").innerHTML = html);
+    </script>
+
+
+    <section class="googleads-wrapper">
+
+        <section class="googleads-hero-2">
+            <div class="ga-hero-content">
+                <h1>
+                    <span class="mark-blue">Google Ads</span> – Giải pháp tăng trưởng nhanh cho doanh nghiệp Việt
+                </h1>
+                <p class="ga-sub">
+                    Tối ưu chi phí – Gia tăng chuyển đổi – Tiếp cận khách hàng đang có nhu cầu thật.
+                    Sota Agency giúp doanh nghiệp chinh phục Google Search, YouTube, Display, Remarketing
+                    với chiến lược thông minh & đo lường chuẩn GA4.
+                </p>
+
+                <div class="ga-hero-buttons">
+                    <a href="#" class="btn-ga-primary">Nhận tư vấn miễn phí</a>
+                    <a href="#" class="btn-ga-outline">Xem bảng giá</a>
+                </div>
+            </div>
+
+            <div class="ga-hero-stickers">
+                <span class="s1">📈</span>
+                <span class="s2">✨</span>
+                <span class="s3">🎯</span>
+                <span class="s4">💡</span>
+            </div>
+        </section>
+
+
+        <!-- SECTION: BENEFITS -->
+        <section class="ga-section ga-benefits">
+            <div class="ga-col">
+                <h2><span class="hl-yellow">Tại sao doanh nghiệp nên chạy Google Ads?</span></h2>
+                <ul>
+                    <li>⭐ Hiển thị đúng thời điểm khách hàng tìm kiếm → Tỷ lệ chuyển đổi cao.</li>
+                    <li>⭐ Kiểm soát ngân sách linh hoạt, chỉ trả tiền khi có người nhấp.</li>
+                    <li>⭐ Phủ đa kênh: Search, Youtube, Display, Remarketing…</li>
+                    <li>⭐ Báo cáo minh bạch – theo dõi hiệu suất theo thời gian thực.</li>
+                    <li>⭐ Khả năng tiếp cận khách hàng có nhu cầu thật – đúng insight.</li>
+                    <li>⭐ Tối ưu tự động bằng AI của Google → Tăng tỷ lệ ra đơn.</li>
+                </ul>
+            </div>
+            <div class="ga-col sticker-side">
+                <div class="big-sticker">🔍</div>
+                <p>
+                    Google Ads phù hợp với mọi lĩnh vực: bán lẻ – bất động sản – thẩm mỹ – giáo dục – dịch vụ –
+                    thương mại điện tử… giúp doanh nghiệp tiếp cận đúng người đang có nhu cầu.
+                </p>
+                <p>
+                    Với hệ thống đo lường nâng cao như GTM – GA4 – Conversion Tracking, Sota giúp doanh nghiệp
+                    theo dõi chính xác từng lượt nhấp, từng cuộc gọi, từng chuyển đổi.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION: SERVICES -->
+        <section class="ga-section ga-services">
+            <h2><span class="hl-red">Các gói dịch vụ Google Ads tại Sota</span></h2>
+            <div class="ga-three-cols">
+                <div class="ga-card">
+                    <h3>Google Search Ads</h3>
+                    <p>
+                        Quảng cáo từ khóa tìm kiếm – đánh trúng nhu cầu ngay lập tức.
+                        Phù hợp bán hàng, thu lead, dịch vụ, spa, Nha khoa, nội thất…
+                    </p>
+                    <span class="sticker">📌</span>
+                </div>
+                <div class="ga-card">
+                    <h3>Google Display & Remarketing</h3>
+                    <p>
+                        Hiển thị banner trên hàng triệu website đối tác Google.
+                        Bám đuổi khách hàng đã từng truy cập → tăng tỷ lệ ra đơn mạnh mẽ.
+                    </p>
+                    <span class="sticker">🎯</span>
+                </div>
+                <div class="ga-card">
+                    <h3>YouTube Ads</h3>
+                    <p>
+                        Video Ads giúp tăng nhận diện thương hiệu nhanh chóng.
+                        Tiếp cận khách hàng theo sở thích, độ tuổi, hành vi.
+                    </p>
+                    <span class="sticker">▶️</span>
+                </div>
+            </div>
+
+            <p class="service-more">
+                Ngoài ra Sota còn cung cấp dịch vụ tối ưu chuyên sâu: Setup conversion, phân tích từ khóa,
+                A/B testing, lên chiến lược mở rộng thị trường, tối ưu ngân sách theo khu vực, ngành hàng,
+                thiết kế landing page chuẩn chuyển đổi.
+            </p>
+        </section>
+
+        <section class="sota-process">
+            <h2 class="section-title">Quy trình triển khai tại Sota</h2>
+
+            <div class="process-steps">
+
+                <div class="process-item">
+                    <div class="icon">📝</div>
+                    <h3 class="highlight">Tiếp nhận thông tin – mục tiêu</h3>
+                    <p>Thu thập nhu cầu, mong muốn, ngành nghề, ngân sách dự kiến và mục tiêu quảng cáo để xây dựng
+                        chiến lược phù hợp nhất.</p>
+                </div>
+
+                <div class="process-item">
+                    <div class="icon">📊</div>
+                    <h3 class="highlight">Phân tích thị trường – đối thủ</h3>
+                    <p>Đánh giá thị trường, hành vi khách hàng, mức độ cạnh tranh và xu hướng quảng cáo trong ngành để
+                        đưa ra hướng triển khai tối ưu.</p>
+                </div>
+
+                <div class="process-item">
+                    <div class="icon">🧠</div>
+                    <h3 class="highlight">Lên chiến lược – ngân sách</h3>
+                    <p>Xác định tệp khách hàng, lựa chọn định dạng quảng cáo, xây dựng phễu và tối ưu ngân sách để đạt
+                        hiệu quả cao nhất.</p>
+                </div>
+
+                <div class="process-item">
+                    <div class="icon">🎨</div>
+                    <h3 class="highlight">Thiết kế – viết nội dung – setup</h3>
+                    <p>Tạo hình ảnh, video, nội dung quảng cáo đúng chuẩn chuyển đổi; tiến hành setup chiến dịch chuyên
+                        nghiệp.</p>
+                </div>
+
+                <div class="process-item">
+                    <div class="icon">🚀</div>
+                    <h3 class="highlight">Chạy thử – tối ưu 48h đầu</h3>
+                    <p>Theo dõi sát sao, A/B testing, điều chỉnh giá thầu – tệp – nội dung để chiến dịch đi đúng hướng
+                        và ổn định.</p>
+                </div>
+
+                <div class="process-item">
+                    <div class="icon">📈</div>
+                    <h3 class="highlight">Duy trì – tối ưu – báo cáo minh bạch</h3>
+                    <p>Tối ưu liên tục theo số liệu thực tế, đảm bảo hiệu suất luôn cao và gửi báo cáo rõ ràng theo
+                        ngày/tuần/tháng.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="google-ads-section">
+            <h2 class="google-title">HÌNH THỨC QUẢNG CÁO GOOGLE</h2>
+
+            <div class="google-ads-list">
+
+                <div class="google-card">
+                    <span class="highlight h-blue">Google Search Ads</span>
+                    <p>Quảng cáo xuất hiện ngay khi khách hàng tìm kiếm từ khóa liên quan đến sản phẩm/dịch vụ.</p>
+                </div>
+
+                <div class="google-card">
+                    <span class="highlight h-red">Google Display Ads</span>
+                    <p>Quảng cáo banner hiển thị trên hệ thống website đối tác của Google, tăng độ nhận diện thương
+                        hiệu.</p>
+                </div>
+
+                <div class="google-card">
+                    <span class="highlight h-yellow">Google Video Ads</span>
+                    <p>Quảng cáo video trên YouTube giúp tiếp cận khách hàng bằng hình ảnh sinh động và thu hút.</p>
+                </div>
+
+                <div class="google-card">
+                    <span class="highlight h-green">Google Shopping Ads</span>
+                    <p>Quảng cáo sản phẩm kèm giá, ảnh và thông tin gian hàng cực kỳ hiệu quả cho bán hàng online.</p>
+                </div>
+
+                <div class="google-card">
+                    <span class="highlight h-blue">Google Remarketing</span>
+                    <p>Nhắm lại khách hàng đã từng truy cập website giúp tăng tỷ lệ chuyển đổi.</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="commit-v2">
+            <h2 class="commitv2-title">CAM KẾT TỪ SOTA</h2>
+
+            <div class="commitv2-item">
+                <div class="commitv2-text">
+                    <h3 class="commitv2-head">
+                        <span>Hiệu quả thật – số liệu thật</span>
+                    </h3>
+                    <p>Tối ưu chi phí theo thời gian thực, bám sát từng từ khóa mang lại chuyển đổi. Báo cáo dựa trên dữ
+                        liệu Google chuẩn 100%.</p>
+                </div>
+                <div class="commitv2-sticker commitv2-sticker-blue"></div>
+            </div>
+
+            <div class="commitv2-item reverse">
+                <div class="commitv2-sticker commitv2-sticker-red"></div>
+                <div class="commitv2-text">
+                    <h3 class="commitv2-head">
+                        <span>Không đốt ngân sách</span>
+                    </h3>
+                    <p>Chỉ chọn nhóm từ khóa mang lại tỉ lệ chuyển đổi cao. Không chạy lan man, không tốn tiền vô ích.
+                    </p>
+                </div>
+            </div>
+
+            <div class="commitv2-item">
+                <div class="commitv2-text">
+                    <h3 class="commitv2-head">
+                        <span>Hỗ trợ nhanh 24/7</span>
+                    </h3>
+                    <p>Luôn có chuyên viên theo dõi chiến dịch. Cần đổi nội dung – điều chỉnh ngân sách – thêm từ khóa?
+                        Xử lý ngay.</p>
+                </div>
+                <div class="commitv2-sticker commitv2-sticker-yellow"></div>
+            </div>
+
+            <div class="commitv2-item reverse">
+                <div class="commitv2-sticker commitv2-sticker-green"></div>
+                <div class="commitv2-text">
+                    <h3 class="commitv2-head">
+                        <span>Tối ưu liên tục</span>
+                    </h3>
+                    <p>Điều chỉnh giá thầu – nhóm quảng cáo – tệp tìm kiếm mỗi ngày. Đảm bảo CPC thấp, CTR cao, chuyển
+                        đổi tăng đều.</p>
+                </div>
+            </div>
+        </section>
+        <section class="googleads-pricing-v2">
+            <h2 class="gapv2-title">BẢNG GIÁ DỊCH VỤ GOOGLE ADS</h2>
+
+            <div class="gapv2-pricing-row">
+                <div class="gapv2-plan">
+                    <h3><span>Gói 5 Triệu</span></h3>
+                    <p>Phù hợp doanh nghiệp nhỏ hoặc chạy thử nghiệm thị trường theo khu vực. Tối ưu nhóm từ khóa chuyển
+                        đổi cao.</p>
+                    <div class="gapv2-sticker gblue"></div>
+                </div>
+
+                <div class="gapv2-plan">
+                    <h3><span>Gói 10 – 20 Triệu</span></h3>
+                    <p>Chiến dịch tối ưu ra đơn – tăng chuyển đổi – bám sát hành vi tìm kiếm thật của khách hàng.</p>
+                    <div class="gapv2-sticker gyellow"></div>
+                </div>
+
+                <div class="gapv2-plan">
+                    <h3><span>Gói Theo Yêu Cầu</span></h3>
+                    <p>Phù hợp doanh nghiệp lớn – đa khu vực – cần triển khai quy mô mạnh và bám KPI rõ ràng.</p>
+                    <div class="gapv2-sticker ggreen"></div>
+                </div>
+            </div>
+
+            <p class="gapv2-note">*Chi phí có thể thay đổi tùy ngành – mức độ cạnh tranh – mục tiêu chuyển đổi.</p>
+        </section>
+
+
+        <!-- LIÊN HỆ -->
+        <section class="googleads-contact-v2">
+            <div class="contactv2-left">
+                <h2><span>Liên hệ Sota Agency</span></h2>
+                <p>Sota đồng hành triển khai Google Ads hiệu quả – minh bạch – tối ưu liên tục.
+                    Đội ngũ hỗ trợ nhanh qua Zalo & Hotline, đảm bảo chiến dịch vận hành ổn định và tăng trưởng đều.</p>
+
+                <ul>
+                    <li>📞 Hotline: 09xx xxx xxx</li>
+                    <li>📩 Email: support@sota.vn</li>
+                    <li>🌐 Website: sota.vn</li>
+                    <li>💬 Zalo hỗ trợ 24/7</li>
+                </ul>
+            </div>
+
+            <form class="contactv2-form">
+                <h3>Đăng ký nhận tư vấn</h3>
+                <input type="text" placeholder="Họ và tên">
+                <input type="text" placeholder="Số điện thoại">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Nhu cầu quảng cáo của bạn..."></textarea>
+                <button>Gửi thông tin</button>
+            </form>
+        </section>
+  <!-- CTA Fixed Start -->
+    <a href="hotro.html" class="lux-cta-btn">
+        <i class="fa fa-comments me-2"></i> Tư vấn ngay
+    </a>
+    <!-- CTA Fixed End -->
+    <!-- FOOTER -->
+    <div id="footer"></div>
+    <script>
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("footer").innerHTML = html);
+    </script>
+
+
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+    <!--tuyết rới-->
+    <img id="santa" src="https://clipart-library.com/2024/picture-of-cartoon-santa/picture-of-cartoon-santa-3.png"
+        alt="Santa Claus">
+    <canvas id="snowCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('snowCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let W = window.innerWidth;
+        let H = window.innerHeight;
+        canvas.width = W;
+        canvas.height = H;
+
+        // Tạo mảng tuyết
+        let mf = 150; // số lượng bông tuyết
+        let flakes = [];
+        for (let i = 0; i < mf; i++) {
+            flakes.push({
+                x: Math.random() * W,
+                y: Math.random() * H,
+                r: Math.random() * 4 + 1,
+                d: Math.random() * mf
+            });
+        }
+
+        // Vị trí Santa
+        let santa = {
+            x: 20,
+            y: H - 100,
+            width: 80,
+            height: 80,
+            offset: 0,
+            dir: 1
+        };
+
+        // Vẽ bông tuyết + Santa
+        function drawFlakes() {
+            ctx.clearRect(0, 0, W, H);
+
+            // Vẽ tuyết
+            ctx.fillStyle = "white";
+            ctx.beginPath();
+            for (let i = 0; i < mf; i++) {
+                let f = flakes[i];
+                ctx.moveTo(f.x, f.y);
+                ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, true);
+            }
+            ctx.fill();
+            moveFlakes();
+
+            // Vẽ Santa nhún nhẹ
+            if (santaImg.complete) { // đảm bảo ảnh tải xong
+                santa.offset += 0.5 * santa.dir;
+                if (santa.offset > 5 || santa.offset < 0) santa.dir *= -1;
+                ctx.drawImage(santaImg, santa.x, santa.y - santa.offset, santa.width, santa.height);
+            }
+        }
+
+        // Di chuyển bông tuyết
+        let angle = 0;
+        function moveFlakes() {
+            angle += 0.01;
+            for (let i = 0; i < mf; i++) {
+                let f = flakes[i];
+                f.y += Math.cos(angle + f.d) + 1 + f.r / 2;
+                f.x += Math.sin(angle) * 2;
+
+                if (f.x > W + 5 || f.x < -5 || f.y > H) {
+                    if (i % 3 > 0) {
+                        flakes[i] = { x: Math.random() * W, y: -10, r: f.r, d: f.d };
+                    } else {
+                        if (Math.sin(angle) > 0) {
+                            flakes[i] = { x: -5, y: Math.random() * H, r: f.r, d: f.d };
+                        } else {
+                            flakes[i] = { x: W + 5, y: Math.random() * H, r: f.r, d: f.d };
+                        }
+                    }
+                }
+            }
+        }
+
+        // Animate
+        setInterval(drawFlakes, 25);
+
+        // Resize canvas khi đổi kích thước màn hình
+        window.addEventListener('resize', () => {
+            W = window.innerWidth;
+            H = window.innerHeight;
+            canvas.width = W;
+            canvas.height = H;
+            santa.y = H - 100; // cập nhật vị trí Santa
+        });
+    </script>
+
+    <script>
+        // Optional: show alert on submit
+        const newsletterForm = document.querySelector('.lux-newsletter-form');
+        newsletterForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert("Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ sớm.");
+            newsletterForm.reset();
+        });
+    </script>
+    <script>
+        document.querySelectorAll(".step-item").forEach(item => {
+            const text = item.getAttribute("data-desc");
+            item.querySelector(".step-popup").innerText = text;
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="css/style.css?v=1.3">
+
+    <style>
+        /* RESET - Áp dụng riêng cho Landing Page */
+        .lp-fb-container * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+            color: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        /* Thiết lập nền và màu chữ chính cho Landing Page */
+        .lp-fb-container {
+            background: #ffffff; /* Nền trắng sáng */
+            color: #1C1E21; /* Chữ đen đậm Facebook */
+            line-height: 1.6;
+            margin: 0 auto;
+        }
+
+        /* Facebook Colors */
+        :root {
+            --fb-blue: #1877F2;
+            --fb-dark-text: #1C1E21;
+            --fb-light-bg: #F0F2F5; /* Nền sáng xám nhạt */
+            --fb-green: #38C172; /* Màu nhấn phụ */
+        }
+
+        /* ==================== BANNER ==================== */
+
+        .lp-fb-container .lp-banner-section {
+            width: 100%;
+            padding: 100px 5%;
+            background: var(--fb-light-bg); /* Nền sáng */
+            border-bottom: 5px solid var(--fb-blue);
+            margin-bottom: 50px;
+        }
+
+        .lp-fb-container .lp-banner-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .lp-fb-container .lp-banner-heading-h1 {
+            font-size: 50px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--fb-dark-text);
+        }
+
+        .lp-fb-container .lp-fb-highlight {
+            color: var(--fb-blue);
+        }
+
+        .lp-fb-container .lp-banner-p {
+            max-width: 850px;
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            color: var(--fb-dark-text);
+        }
+
+        .lp-fb-container .lp-fb-btn {
+            padding: 14px 32px;
+            background: var(--fb-blue);
+            color: #fff;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: .3s;
+            display: inline-block;
+        }
+
+        .lp-fb-container .lp-fb-btn:hover {
+            background: #146CC6; /* Darker blue */
+        }
+
+        /* ==================== TITLE ==================== */
+
+        .lp-fb-container .lp-section-title {
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            position: relative;
+            color: var(--fb-dark-text);
+            text-align: center;
+        }
+
+        .lp-fb-container .lp-section-title::after {
+            content: "";
+            width: 100px;
+            height: 4px;
+            background: var(--fb-blue);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+        }
+
+        /* ==================== WHY FB ADS SECTION ==================== */
+        .lp-fb-container .lp-why-section {
+            padding: 60px 5%;
+            background: #fff;
+            color: var(--fb-dark-text);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .lp-fb-container .lp-why-intro-p {
+            max-width: 900px;
+            margin: 10px auto 30px;
+            color: #555;
+            font-size: 17px;
+            line-height: 1.65;
+            text-align: center;
+        }
+
+        .lp-fb-container .lp-why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 18px;
+        }
+
+        .lp-fb-container .lp-why-item {
+            background: var(--fb-light-bg); 
+            border: 1px solid #ddd; 
+            padding: 25px;
+            border-radius: 12px;
+            transition: box-shadow .3s, border-color .3s;
+            min-height: 180px;
+        }
+
+        .lp-fb-container .lp-why-item:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-color: var(--fb-blue);
+        }
+
+        .lp-fb-container .lp-why-item-h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--fb-blue);
+        }
+
+        .lp-fb-container .lp-why-item-h3 i {
+            margin-right: 10px;
+        }
+
+        .lp-fb-container .lp-why-desc-p {
+            color: #333;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* CTA line */
+        .lp-fb-container .lp-why-cta-p {
+            margin-top: 40px;
+            font-weight: 600;
+            color: #555;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        .lp-fb-container .lp-link-cta {
+            color: var(--fb-blue);
+            text-decoration: underline;
+            font-weight: 800;
+            margin-left: 8px;
+        }
+
+        /* ==================== PROCESS (Quy trình) ==================== */
+
+        .lp-fb-container .lp-process-section {
+            padding: 60px 5%;
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        .lp-fb-container .lp-process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .lp-fb-container .lp-process-item {
+            background: var(--fb-light-bg);
+            border-top: 4px solid var(--fb-green); /* Màu nhấn phụ */
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .lp-fb-container .lp-process-item-h3 {
+            color: var(--fb-dark-text);
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .lp-fb-container .lp-process-item-h3 span {
+            color: var(--fb-blue);
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .lp-fb-container .lp-process-item-p {
+            font-size: 15.5px;
+            color: #555;
+        }
+
+
+        /* ==================== OFFER (Dịch vụ) ==================== */
+
+        .lp-fb-container .lp-types-section {
+            padding: 60px 5%;
+            background: var(--fb-light-bg);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .lp-fb-container .lp-types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .lp-fb-container .lp-type-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 14px;
+            border: 1px solid #ddd;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .lp-fb-container .lp-type-box-h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--fb-dark-text);
+            font-weight: 700;
+        }
+
+        .lp-fb-container .lp-type-box-h3 i {
+            margin-right: 10px;
+            color: var(--fb-blue);
+        }
+
+        .lp-fb-container .lp-type-box-p {
+            font-size: 15.5px;
+            color: #555;
+        }
+
+        /* Tag */
+        .lp-fb-container .lp-tag {
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+            display: inline-block;
+            font-size: 12px;
+            margin-right: 8px;
+            text-transform: uppercase;
+        }
+
+        .lp-fb-container .tag-blue {
+            background: var(--fb-blue);
+            color: #fff;
+        }
+
+        .lp-fb-container .tag-green {
+            background: var(--fb-green);
+            color: #fff;
+        }
+
+
+        /* ==================== COMMIT (Cam kết) ==================== */
+
+        .lp-fb-container .lp-commit-section {
+            padding: 60px 5%;
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        .lp-fb-container .lp-commit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .lp-fb-container .lp-commit-card {
+            background: var(--fb-light-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid var(--fb-blue);
+            transition: all .3s;
+        }
+        
+        .lp-fb-container .lp-commit-card:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .lp-fb-container .lp-commit-card-h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--fb-dark-text);
+            font-weight: 700;
+        }
+
+        .lp-fb-container .lp-commit-card-h3 i {
+            color: var(--fb-green);
+            margin-right: 8px;
+        }
+
+        .lp-fb-container .lp-commit-card-p {
+            font-size: 15.5px;
+            color: #555;
+        }
+
+
+        /* ==================== PRICING & CONTACT ==================== */
+
+        .lp-fb-container .lp-pricing-section {
+            padding: 60px 5%;
+            background: var(--fb-light-bg);
+            max-width: 1100px;
+            margin: 0 auto;
+            border-top: 1px solid #ccc;
+        }
+
+        .lp-fb-container .lp-pricing-layout {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .lp-fb-container .lp-pricing-content {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .lp-fb-container .lp-pricing-content-h3 {
+            color: var(--fb-blue);
+            margin-bottom: 8px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .lp-fb-container .lp-pricing-content-p {
+            margin-bottom: 22px;
+            opacity: 0.9;
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* Form */
+        .lp-fb-container .lp-contact-form {
+            flex: 1;
+            background: #fff;
+            padding: 30px;
+            border-radius: 14px;
+            border: 1px solid #ccc;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            min-width: 360px;
+        }
+
+        .lp-fb-container .lp-contact-form-h3 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: var(--fb-blue);
+            font-weight: 800;
+        }
+
+        .lp-fb-container .lp-contact-form input,
+        .lp-fb-container .lp-contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 14px;
+            background: #f8f8f8;
+            border: 1px solid #ccc;
+            color: var(--fb-dark-text);
+            border-radius: 6px;
+        }
+
+        .lp-fb-container .lp-contact-form button {
+            width: 100%;
+            background: var(--fb-blue);
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .lp-fb-container .lp-contact-form button:hover {
+            background: #146CC6;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .lp-fb-container .lp-banner-heading-h1 {
+                font-size: 38px;
+            }
+            .lp-fb-container .lp-section-title {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+      <!-- NAVBAR -->
+    <div id="navbar"></div>
+    <script>
+        fetch("navbar.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("navbar").innerHTML = html);
+    </script>
+    <div class="lp-fb-container">
+        <section class="lp-banner-section">
+            <div class="lp-banner-inner">
+                <h1 class="lp-banner-heading-h1">
+                    Chinh phục <span class="lp-fb-highlight">Facebook Ads</span> – Tăng trưởng doanh số bền vững
+                </h1>
+                <p class="lp-banner-p">
+                    Đã đến lúc thoát khỏi vòng lặp **"chi phí cao, hiệu quả thấp"**. Chúng tôi cung cấp giải pháp tối ưu
+                    quảng cáo Facebook/Instagram từ chiến lược nội dung, tối ưu tệp đối tượng, đến kỹ thuật Bid thầu, giúp
+                    bạn đạt được **ROAS (Lợi nhuận trên chi phí quảng cáo)** cao nhất.
+                </p>
+                <a href="#contact" class="lp-fb-btn">Tư vấn miễn phí chiến lược ROAS</a>
+            </div>
+        </section>
+
+        <section class="lp-why-section">
+            <div class="lp-why-inner">
+                <h2 class="lp-section-title">Tại sao Facebook Ads vẫn là kênh chủ lực?</h2>
+
+                <p class="lp-why-intro-p">
+                    Với hàng tỷ người dùng hoạt động hàng tháng, Facebook/Instagram vẫn là nền tảng marketing có khả năng
+                    nhắm mục tiêu sâu và tỷ lệ chuyển đổi ổn định nhất, đặc biệt khi được vận hành đúng cách.
+                </p>
+
+                <div class="lp-why-grid">
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3"><i class="fas fa-users"></i> Khả năng nhắm mục tiêu chính xác</h3>
+                        <p class="lp-why-desc-p">
+                            Tận dụng dữ liệu hành vi, nhân khẩu học và sở thích để tạo ra các tệp khách hàng tiềm năng,
+                            tăng
+                            khả năng tiếp cận đúng người, đúng thời điểm.
+                        </p>
+                    </article>
+
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3"><i class="fas fa-chart-line"></i> Tối ưu hóa chuyển đổi nâng cao</h3>
+                        <p class="lp-why-desc-p">
+                            Thiết lập Pixel, Conversion API (CAPI) chuẩn mực, giúp Facebook AI học hỏi nhanh chóng và tối
+                            ưu
+                            chiến dịch để mang lại đơn hàng/lead với chi phí thấp nhất.
+                        </p>
+                    </article>
+
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3"><i class="fas fa-hand-holding-usd"></i> Tăng trưởng ROAS ổn định</h3>
+                        <p class="lp-why-desc-p">
+                            Chúng tôi tập trung vào việc quản lý ngân sách thông minh và phân bổ hiệu quả để đảm bảo lợi
+                            nhuận
+                            trên chi phí quảng cáo (ROAS) luôn ở mức sinh lời.
+                        </p>
+                    </article>
+
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3"><i class="fas fa-mobile-alt"></i> Tiếp cận đa nền tảng (Meta)</h3>
+                        <p class="lp-why-desc-p">
+                            Quảng cáo đồng thời xuất hiện trên Facebook, Instagram, Messenger, Audience Network, mở rộng
+                            phạm vi
+                            tiếp cận mà không cần tăng ngân sách phức tạp.
+                        </p>
+                    </article>
+
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3"><i class="fas fa-bullseye"></i> Remarketing hiệu quả</h3>
+                        <p class="lp-why-desc-p">
+                            Tái tiếp thị những khách hàng đã tương tác (nhắn tin, xem video, thêm vào giỏ hàng) để chuyển
+                            đổi
+                            họ thành đơn hàng với chi phí rất thấp.
+                        </p>
+                    </article>
+
+                    <article class="lp-why-item">
+                        <h3 class="lp-why-item-h3"><i class="fas fa-video"></i> Sáng tạo nội dung cuốn hút</h3>
+                        <p class="lp-why-desc-p">
+                            Hỗ trợ xây dựng nội dung (hình ảnh, video) thu hút, vượt qua sự cạnh tranh, giúp quảng cáo được
+                            duyệt nhanh và tăng điểm chất lượng (Quality Ranking).
+                        </p>
+                    </article>
+                </div>
+
+                <p class="lp-why-cta-p">
+                    Bạn đã sẵn sàng để tối ưu hóa chiến lược quảng cáo và tăng doanh thu? <a href="#contact"
+                        class="lp-link-cta">Đăng ký nhận báo giá ngay</a>!
+                </p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="lp-process-section">
+            <h2 class="lp-section-title">Quy trình vận hành Facebook Ads hiệu quả</h2>
+
+            <div class="lp-process-grid">
+                <div class="lp-process-item">
+                    <h3 class="lp-process-item-h3"><span>1.</span> Phân tích mục tiêu & Đối tượng</h3>
+                    <p class="lp-process-item-p">
+                        Nghiên cứu thị trường, chân dung khách hàng (ICP), phân tích đối thủ cạnh tranh để xác định mục
+                        tiêu chuyển đổi (Mua hàng, Lead, Traffic).
+                    </p>
+                </div>
+
+                <div class="lp-process-item">
+                    <h3 class="lp-process-item-h3"><span>2.</span> Thiết lập hạ tầng tracking chuẩn</h3>
+                    <p class="lp-process-item-p">
+                        Cài đặt **Pixel** và **Conversion API** (CAPI) đầy đủ, chính xác để đảm bảo thu thập dữ liệu và tối
+                        ưu theo thời gian thực, vượt qua các rào cản về bảo mật.
+                    </p>
+                </div>
+
+                <div class="lp-process-item">
+                    <h3 class="lp-process-item-h3"><span>3.</span> Lên chiến lược Creative & Copywriting</h3>
+                    <p class="lp-process-item-p">
+                        Xây dựng nội dung quảng cáo (Visual & Text) theo các mô hình AIDA, PAS, **Creative Testing** để tìm
+                        ra winning adset nhanh nhất.
+                    </p>
+                </div>
+
+                <div class="lp-process-item">
+                    <h3 class="lp-process-item-h3"><span>4.</span> Vận hành, Scale & Tối ưu ngân sách</h3>
+                    <p class="lp-process-item-p">
+                        Sử dụng kỹ thuật nhân nhóm/nhân chiến dịch (Scaling techniques) và phân bổ ngân sách theo hiệu quả
+                        (CBO/ABO) để tối đa hóa lợi nhuận.
+                    </p>
+                </div>
+
+                <div class="lp-process-item">
+                    <h3 class="lp-process-item-h3"><span>5.</span> Quản lý Tệp tùy chỉnh & Lookalike</h3>
+                    <p class="lp-process-item-p">
+                        Liên tục làm giàu các tệp khách hàng tiềm năng (Tương tác, Lưu video, Khách hàng cũ) và tạo các tệp
+                        Lookalike hiệu quả cao (1% - 5%).
+                    </p>
+                </div>
+
+                <div class="lp-process-item">
+                    <h3 class="lp-process-item-h3"><span>6.</span> Báo cáo chuyên sâu & Đề xuất hành động</h3>
+                    <p class="lp-process-item-p">
+                        Cung cấp báo cáo hàng tuần/tháng với các chỉ số quan trọng (CPC, CPM, CTR, ROAS) và các đề xuất cụ
+                        thể để cải thiện hiệu suất.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="lp-types-section">
+            <h2 class="lp-section-title">Các gói dịch vụ Facebook Ads nổi bật</h2>
+
+            <div class="lp-types-grid">
+
+                <div class="lp-type-box">
+                    <span class="lp-tag tag-blue">Phổ biến</span>
+                    <h3 class="lp-type-box-h3"><i class="fas fa-shopping-cart"></i> Dịch vụ Chuyển đổi (Conversion)</h3>
+                    <p class="lp-type-box-p">
+                        Tập trung tối đa vào việc mang lại đơn hàng/doanh thu trực tiếp. Phù hợp cho ngành **Ecommerce, Bán
+                        lẻ, Thời trang, Mỹ phẩm.**
+                        <br><br>
+                        *KPI chính: ROAS, CPA.
+                    </p>
+                </div>
+
+                <div class="lp-type-box">
+                    <span class="lp-tag tag-green">B2B & Dịch vụ</span>
+                    <h3 class="lp-type-box-h3"><i class="fas fa-envelope-open-text"></i> Dịch vụ Thu Lead (Lead Generation)</h3>
+                    <p class="lp-type-box-p">
+                        Thiết kế quy trình thu thập thông tin khách hàng (Form, Inbox) cho các ngành có giá trị cao. Phù
+                        hợp
+                        cho **Bất động sản, Giáo dục, Tài chính, Dịch vụ.**
+                        <br><br>
+                        *KPI chính: CPL, Số lượng Lead.
+                    </p>
+                </div>
+
+                <div class="lp-type-box">
+                    <span class="lp-tag tag-blue">Nâng cao</span>
+                    <h3 class="lp-type-box-h3"><i class="fas fa-layer-group"></i> Dịch vụ Tái tiếp thị (Remarketing)</h3>
+                    <p class="lp-type-box-p">
+                        Kỹ thuật tái tiếp cận khách hàng đã truy cập website hoặc tương tác với Fanpage, nhằm thúc đẩy họ
+                        hoàn
+                        tất giao dịch.
+                        <br><br>
+                        *KPI chính: Frequency, ROAS của tệp ấm.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="lp-commit-section">
+            <h2 class="lp-section-title">Cam kết lợi ích từ Sota Media</h2>
+
+            <div class="lp-commit-grid">
+
+                <div class="lp-commit-card">
+                    <h3 class="lp-commit-card-h3"><i class="fas fa-check-circle"></i> Minh bạch chi phí, không phụ phí ẩn</h3>
+                    <p class="lp-commit-card-p">
+                        Tất cả chi phí media được tách bạch rõ ràng, bạn sẽ nhận được báo cáo chi tiêu chính xác theo từng
+                        đồng ngân sách.
+                    </p>
+                </div>
+
+                <div class="lp-commit-card">
+                    <h3 class="lp-commit-card-h3"><i class="fas fa-check-circle"></i> Đội ngũ có kinh nghiệm giải quyết "khó"</h3>
+                    <p class="lp-commit-card-p">
+                        Chuyên gia vận hành với kinh nghiệm xử lý các chiến dịch ngân sách lớn, tối ưu trong môi trường
+                        cạnh
+                        tranh cao.
+                    </p>
+                </div>
+
+                <div class="lp-commit-card">
+                    <h3 class="lp-commit-card-h3"><i class="fas fa-check-circle"></i> Thiết lập hạ tầng Tracking chuẩn mực</h3>
+                    <p class="lp-commit-card-p">
+                        Đảm bảo hệ thống theo dõi chuyển đổi (Pixel/CAPI) được cài đặt tối ưu, giúp dữ liệu luôn chính xác
+                        và
+                        đầy đủ.
+                    </p>
+                </div>
+
+                <div class="lp-commit-card">
+                    <h3 class="lp-commit-card-h3"><i class="fas fa-check-circle"></i> Hỗ trợ sáng tạo nội dung A/B Testing</h3>
+                    <p class="lp-commit-card-p">
+                        Liên tục thử nghiệm các mẫu quảng cáo mới để tìm ra nội dung tốt nhất (Winning Creative), giảm chi
+                        phí
+                        trên mỗi kết quả.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="lp-pricing-section" id="contact">
+            <h2 class="lp-section-title">Nhận báo giá chi tiết & Tư vấn chiến lược</h2>
+
+            <div class="lp-pricing-layout">
+
+                <div class="lp-pricing-content">
+                    <h3 class="lp-pricing-content-h3">Gói Dịch vụ Cơ bản (Dưới 30 Triệu VNĐ Media)</h3>
+                    <p class="lp-pricing-content-p">
+                        Phù hợp cho các doanh nghiệp vừa và nhỏ, mới triển khai Facebook Ads hoặc cần test sản phẩm/thị
+                        trường
+                        mới. Tối ưu Conversion/Lead cơ bản.
+                    </p>
+
+                    <h3 class="lp-pricing-content-h3">Gói Dịch vụ Tăng tốc (30 – 100 Triệu VNĐ Media)</h3>
+                    <p class="lp-pricing-content-p">
+                        Tập trung vào tối ưu ROAS, kỹ thuật Scaling nâng cao, Remarketing đa tầng, và Creative Testing
+                        chuyên
+                        sâu để bùng nổ doanh số.
+                    </p>
+
+                    <h3 class="lp-pricing-content-h3">Gói Dịch vụ Doanh nghiệp (Trên 100 Triệu VNĐ Media)</h3>
+                    <p class="lp-pricing-content-p">
+                        Giải pháp toàn diện bao gồm quản lý đa tài khoản, CAPI nâng cao, và báo cáo Business Intelligence
+                        (BI)
+                        để quản lý hiệu suất trên toàn bộ hệ sinh thái Meta.
+                    </p>
+                </div>
+
+                <form class="lp-contact-form">
+                    <h3 class="lp-contact-form-h3">Đăng ký để nhận phân tích miễn phí</h3>
+                    <input type="text" placeholder="Họ và tên">
+                    <input type="tel" placeholder="Số điện thoại">
+                    <input type="email" placeholder="Email (Cần thiết)">
+                    <textarea placeholder="Mô tả ngành hàng và nhu cầu quảng cáo của bạn..."></textarea>
+                    <button>Gửi thông tin tư vấn</button>
+                </form>
+
+            </div>
+        </section>
+    </div>
+      <!-- CTA Fixed Start -->
+    <a href="hotro.html" class="lux-cta-btn">
+        <i class="fa fa-comments me-2"></i> Tư vấn ngay
+    </a>
+    <!-- CTA Fixed End -->
+    <!-- FOOTER -->
+    <div id="footer"></div>
+    <script>
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("footer").innerHTML = html);
+    </script>
+
+
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+    <!--tuyết rới-->
+    <img id="santa" src="https://clipart-library.com/2024/picture-of-cartoon-santa/picture-of-cartoon-santa-3.png"
+        alt="Santa Claus">
+    <canvas id="snowCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('snowCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let W = window.innerWidth;
+        let H = window.innerHeight;
+        canvas.width = W;
+        canvas.height = H;
+
+        // Tạo mảng tuyết
+        let mf = 150; // số lượng bông tuyết
+        let flakes = [];
+        for (let i = 0; i < mf; i++) {
+            flakes.push({
+                x: Math.random() * W,
+                y: Math.random() * H,
+                r: Math.random() * 4 + 1,
+                d: Math.random() * mf
+            });
+        }
+
+        // Vị trí Santa
+        let santa = {
+            x: 20,
+            y: H - 100,
+            width: 80,
+            height: 80,
+            offset: 0,
+            dir: 1
+        };
+
+        // Vẽ bông tuyết + Santa
+        function drawFlakes() {
+            ctx.clearRect(0, 0, W, H);
+
+            // Vẽ tuyết
+            ctx.fillStyle = "white";
+            ctx.beginPath();
+            for (let i = 0; i < mf; i++) {
+                let f = flakes[i];
+                ctx.moveTo(f.x, f.y);
+                ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, true);
+            }
+            ctx.fill();
+            moveFlakes();
+
+            // Vẽ Santa nhún nhẹ
+            if (santaImg.complete) { // đảm bảo ảnh tải xong
+                santa.offset += 0.5 * santa.dir;
+                if (santa.offset > 5 || santa.offset < 0) santa.dir *= -1;
+                ctx.drawImage(santaImg, santa.x, santa.y - santa.offset, santa.width, santa.height);
+            }
+        }
+
+        // Di chuyển bông tuyết
+        let angle = 0;
+        function moveFlakes() {
+            angle += 0.01;
+            for (let i = 0; i < mf; i++) {
+                let f = flakes[i];
+                f.y += Math.cos(angle + f.d) + 1 + f.r / 2;
+                f.x += Math.sin(angle) * 2;
+
+                if (f.x > W + 5 || f.x < -5 || f.y > H) {
+                    if (i % 3 > 0) {
+                        flakes[i] = { x: Math.random() * W, y: -10, r: f.r, d: f.d };
+                    } else {
+                        if (Math.sin(angle) > 0) {
+                            flakes[i] = { x: -5, y: Math.random() * H, r: f.r, d: f.d };
+                        } else {
+                            flakes[i] = { x: W + 5, y: Math.random() * H, r: f.r, d: f.d };
+                        }
+                    }
+                }
+            }
+        }
+
+        // Animate
+        setInterval(drawFlakes, 25);
+
+        // Resize canvas khi đổi kích thước màn hình
+        window.addEventListener('resize', () => {
+            W = window.innerWidth;
+            H = window.innerHeight;
+            canvas.width = W;
+            canvas.height = H;
+            santa.y = H - 100; // cập nhật vị trí Santa
+        });
+    </script>
+
+    <script>
+        // Optional: show alert on submit
+        const newsletterForm = document.querySelector('.lux-newsletter-form');
+        newsletterForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert("Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ sớm.");
+            newsletterForm.reset();
+        });
+    </script>
+    <script>
+        document.querySelectorAll(".step-item").forEach(item => {
+            const text = item.getAttribute("data-desc");
+            item.querySelector(".step-popup").innerText = text;
+        });
+    </script>
+
+</body>
+</html>
